@@ -5,25 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Michael Braun – Autor</title>
   <style>
-    body { background: linear-gradient(135deg, #faf6f1 0%, #f5e6d3 100%); font-family: 'Georgia', serif; color: #5a4a42; margin: 0; }
+    body { background: linear-gradient(135deg, #faf6f1 0%, #f5e6d3 100%); font-family: 'Georgia', serif; color: #5a4a42; margin: 0; line-height: 1.6; }
     .hero { background: linear-gradient(135deg, #f0d9c9 0%, #e8cdb8 100%); text-align: center; padding: 70px 20px; }
-    .hero h1 { font-size: 3rem; margin-bottom: 10px; }
-    .hero-badge { display: inline-block; background:#d4a5a5; color:#fff; border-radius:25px; padding:8px 20px; }
+    .hero h1 { font-size: 3rem; margin-bottom: 10px; font-weight: normal; }
+    .hero-badge { display: inline-block; background:#d4a5a5; color:#fff; border-radius:25px; padding:8px 20px; font-size: 1.1rem; }
+    
     section.section { max-width: 1000px; margin: 0 auto; padding: 60px 20px; }
-    section h2 { text-align:center; border-bottom:2px solid #d4a5a5; padding-bottom:15px; margin-bottom:40px; }
+    section h2 { text-align:center; border-bottom:2px solid #d4a5a5; padding-bottom:15px; margin-bottom:40px; font-weight: normal; }
+    
+    .about-text { text-align: justify; font-size: 1.1rem; color: #6b5a52; }
+    
     .books-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; }
-    .book-card { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; }
+    .book-card { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: flex; flex-direction: column; }
     .book-cover img { width: 100%; height: auto; display: block; }
-    .book-content { padding: 25px; }
-    .book-link { display:inline-block; margin-top:10px; background:#d4a5a5; color:white; text-decoration:none; padding:10px 20px; border-radius:4px; }
-    footer { background:#e8cdb8; text-align:center; padding:40px 20px; font-size:0.9rem; }
+    .book-content { padding: 25px; text-align: center; flex-grow: 1; }
+    .book-title { font-size: 1.2rem; margin-bottom: 8px; font-weight: 600; color: #5a4a42; }
+    .book-link { display:inline-block; margin-top:15px; background:#d4a5a5; color:white; text-decoration:none; padding:10px 20px; border-radius:4px; transition: 0.3s; }
+    .book-link:hover { background: #c9949f; }
+    
+    footer { background:#e8cdb8; padding:60px 20px; border-top:1px solid #d4a5a5; color: #5a4a42; }
+    .footer-content { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
+    .footer-section h3 { border-bottom: 1px solid #d4a5a5; padding-bottom: 10px; margin-bottom: 15px; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
+    .footer-bottom { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(90, 74, 66, 0.1); font-size: 0.85rem; }
   </style>
 </head>
 <body>
+
   <section class="hero">
     <h1>Michael Braun</h1>
-    <p>Geschichten, die berühren und fesseln</p>
+    <p style="font-style: italic; font-size: 1.2rem; color: #8b7355; margin-bottom: 20px;">Geschichten, die berühren und fesseln</p>
     <span class="hero-badge">Autor für Krimis, ruhige Geschichten & Science Fiction</span>
+  </section>
+
+  <section class="section">
+    <h2>Über mich</h2>
+    <p class="about-text">
+      Willkommen auf meiner Autorenseite! Mein Name ist <strong>Michael Braun</strong>. Ich lebe im Herzen von <strong>Dortmund</strong> und verfasse hier meine Gedanken und Ideen. 
+      In meinem kreativen Prozess nutze ich moderne <strong>KI-Unterstützung</strong>, um meine Visionen und Erzählungen optimal auszuarbeiten. 
+      Während ich unter meinem bürgerlichen Namen Belletristik und Science-Fiction veröffentliche, schlüpfe ich für meine packenden Dortmund-Krimis in das Pseudonym <strong>Leon Dornfeld</strong>. 
+      Ob leise Töne oder düstere Spannung – meine Werke laden dich ein, in neue Welten einzutauchen.
+    </p>
   </section>
 
   <section class="section">
@@ -32,24 +53,27 @@
       <div class="book-card">
         <div class="book-cover"><img src="Tage_am_Meer_FINAL.jpg" alt="Tage am Meer"></div>
         <div class="book-content">
-          <h3>Tage am Meer</h3>
-          <p>Michael Braun</p>
+          <h3 class="book-title">Tage am Meer</h3>
+          <p style="font-style: italic; color: #8b7355;">Michael Braun</p>
+          <p>Eine berührende Erzählung über Momente, die das Leben verändern.</p>
           <a href="https://amzn.eu/d/02pUsv3b" class="book-link" target="_blank">Auf Amazon ansehen</a>
         </div>
       </div>
       <div class="book-card">
         <div class="book-cover"><img src="Erebus – Der Algorithmus des Bewusstseins.jpg" alt="Erebus"></div>
         <div class="book-content">
-          <h3>Erebus</h3>
-          <p>Michael Braun</p>
+          <h3 class="book-title">Erebus</h3>
+          <p style="font-style: italic; color: #8b7355;">Michael Braun</p>
+          <p>Eine visionäre Geschichte über künstliche Intelligenz und Bewusstsein.</p>
           <a href="https://amzn.eu/d/0ihWKbIM" class="book-link" target="_blank">Auf Amazon ansehen</a>
         </div>
       </div>
       <div class="book-card">
         <div class="book-cover"><img src="Totenstille am Hochofen – Krimi Cover1.jpg" alt="Totenstille am Hochofen"></div>
         <div class="book-content">
-          <h3>Totenstille am Hochofen</h3>
-          <p>Leon Dornfeld</p>
+          <h3 class="book-title">Totenstille am Hochofen</h3>
+          <p style="font-style: italic; color: #8b7355;">Leon Dornfeld</p>
+          <p>Ein spannender Dortmund-Krimi um Ermittler Leon Brandt.</p>
           <a href="https://amzn.eu/d/0hazRS7U" class="book-link" target="_blank">Auf Amazon ansehen</a>
         </div>
       </div>
@@ -57,8 +81,24 @@
   </section>
 
   <footer>
-    <p><strong>Michael Braun</strong> | Frenkingstraße 13 a | 44388 Dortmund</p>
-    <p>📧 <a href="mailto:romanglanz70@gmail.com">romanglanz70@gmail.com</a></p>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Kontakt</h3>
+        <p>Michael Braun</p>
+        <p>Frenkingstraße 13 a</p>
+        <p>44388 Dortmund</p>
+        <p>E-Mail: <a href="mailto:romanglanz70@gmail.com" style="color: #5a4a42; text-decoration: underline;">romanglanz70@gmail.com</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Rechtliches</h3>
+        <p>Alle Rechte vorbehalten.</p>
+        <p>Sämtliche Handlungen und Ähnlichkeiten mit lebenden oder verstorbenen Personen sind rein zufällig und nicht beabsichtigt.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Michael Braun. Erstellt mit Leidenschaft in Dortmund.
+    </div>
   </footer>
+
 </body>
 </html>
