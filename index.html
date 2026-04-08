@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Michael Braun – Autor</title>
-  <meta name="description" content="Offizielle Autorenseite von Michael Braun – Krimis, ruhige Geschichten und Science-Fiction. Entdecke packende Bücher wie 'Totenstille am Hochofen', 'Erebus' und 'Tage am Meer'.">
+
+  <meta name="description" content="Offizielle Autorenseite von Michael Braun – Krimis, ruhige Geschichten und Science-Fiction.">
   <link rel="icon" href="favicon.ico">
+
   <script src="[cdn.tailwindcss.com](https://cdn.tailwindcss.com/3.4.17)"></script>
 
   <style>
@@ -16,15 +18,51 @@
       margin: 0;
       padding: 0;
     }
+
+    /* ---- Hero ---- */
     .hero {
       background: linear-gradient(135deg, #f0d9c9 0%, #e8cdb8 100%);
       text-align: center;
       padding: 70px 20px;
+      position: relative;
     }
-    .hero h1 { font-size: 3rem; font-weight: normal; margin-bottom: 10px; }
-    .hero p.subtitle { font-style: italic; font-size: 1.2rem; color: #8b7355; margin-bottom: 20px; }
-    .hero-badge { display: inline-block; background:#d4a5a5; color:#fff; border-radius:25px; padding:8px 20px; }
 
+    /* Logo mit leichtem Schimmer */
+    .logo-shimmer {
+      display: inline-block;
+      max-width: 120px;
+      margin-bottom: 20px;
+      animation: shimmer 3.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes shimmer {
+      0%   { opacity: 0.9; transform: scale(1);   filter: brightness(1); }
+      100% { opacity: 1;   transform: scale(1.04); filter: brightness(1.08); }
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+
+    .hero p.subtitle {
+      font-style: italic;
+      font-size: 1.2rem;
+      color: #8b7355;
+      margin-bottom: 20px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: #d4a5a5;
+      color: #fff;
+      border-radius: 25px;
+      padding: 8px 20px;
+      font-size: 0.95rem;
+    }
+
+    /* ---- Standardabschnitte ---- */
     section.section {
       max-width: 1000px;
       margin: 0 auto;
@@ -32,11 +70,11 @@
     }
 
     section h2 {
-      text-align:center;
-      border-bottom:2px solid #d4a5a5;
-      padding-bottom:15px;
-      margin-bottom:40px;
-      font-weight:normal;
+      text-align: center;
+      border-bottom: 2px solid #d4a5a5;
+      padding-bottom: 15px;
+      margin-bottom: 40px;
+      font-weight: normal;
     }
 
     .about-text {
@@ -46,6 +84,7 @@
       color: #6b5a52;
     }
 
+    /* ---- Bücher ---- */
     .books-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -89,35 +128,36 @@
     }
 
     .book-genre {
-      display:inline-block;
-      background:#f0d9c9;
-      border-radius:12px;
-      padding:4px 12px;
-      font-size:0.85rem;
-      margin-bottom:10px;
+      display: inline-block;
+      background: #f0d9c9;
+      border-radius: 12px;
+      padding: 4px 12px;
+      font-size: 0.85rem;
+      margin-bottom: 10px;
     }
 
     .book-link {
-      display:inline-block;
-      margin-top:10px;
-      background:#d4a5a5;
-      color:white;
-      text-decoration:none;
-      padding:10px 20px;
-      border-radius:4px;
-      transition:.3s;
+      display: inline-block;
+      margin-top: 10px;
+      background: #d4a5a5;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      transition: .3s;
     }
 
     .book-link:hover {
-      background:#c9949f;
+      background: #c9949f;
     }
 
+    /* ---- Kontakt & Footer ---- */
     footer {
-      background:#e8cdb8;
-      text-align:center;
-      padding:40px 20px;
-      border-top:1px solid #d4a5a5;
-      font-size:0.9rem;
+      background: #e8cdb8;
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid #d4a5a5;
+      font-size: 0.9rem;
     }
 
     @media (max-width:768px){
@@ -131,12 +171,8 @@
 
   <!-- HERO mit Logo -->
   <section class="hero">
-    <img src="romanglanz-logo.png"
-         alt="Romanglanz Logo"
-         style="max-width:120px; margin-bottom:15px;">
-
+    <img src="Logo Romanglanz.jpg" alt="Romanglanz Logo" class="logo-shimmer">
     <h1>Michael Braun</h1>
-
     <p class="subtitle">Geschichten, die berühren und fesseln</p>
     <span class="hero-badge">Autor für Krimis, ruhige Geschichten &amp; Science Fiction</span>
   </section>
@@ -146,8 +182,8 @@
     <h2>Über mich</h2>
     <p class="about-text">
       Willkommen auf meiner Autorenseite! Ich bin Michael Braun und schreibe Geschichten, die in die Seele gehen.
-      Ob packende Kriminalromane, beruhigende Erzählungen oder visionäre Science-Fiction – meine Werke laden dich ein,
-      neue Welten zu entdecken und alte Wahrheiten zu hinterfragen.
+      Ob packende Kriminalromane, beruhigende Erzählungen oder visionäre Science-Fiction –
+      meine Werke laden dich ein, neue Welten zu entdecken und alte Wahrheiten zu hinterfragen.
     </p>
   </section>
 
@@ -156,9 +192,9 @@
     <h2>Meine Bücher</h2>
     <div class="books-grid">
 
-      <!-- Buch 1: Tage am Meer -->
+      <!-- Buch 1 -->
       <div class="book-card">
-        <a href="[amzn.eu](https://amzn.eu/d/02pUsv3b)" target="_blank" rel="noopener noreferrer" class="book-cover">
+        <a href="[amzn.eu](https://amzn.eu/d/02pUsv3b)" target="_blank" class="book-cover">
           <img src="[m.media-amazon.com](https://m.media-amazon.com/images/I/81W0eQ0NljL._SL1500_.jpg)" alt="Cover Tage am Meer von Michael Braun">
         </a>
         <div class="book-content">
@@ -170,9 +206,9 @@
         </div>
       </div>
 
-      <!-- Buch 2: Erebus -->
+      <!-- Buch 2 -->
       <div class="book-card">
-        <a href="[amzn.eu](https://amzn.eu/d/0ihWKbIM)" target="_blank" rel="noopener noreferrer" class="book-cover">
+        <a href="[amzn.eu](https://amzn.eu/d/0ihWKbIM)" target="_blank" class="book-cover">
           <img src="[m.media-amazon.com](https://m.media-amazon.com/images/I/81S2E-WwP3L._SL1500_.jpg)" alt="Cover Erebus – Der Algorithmus des Bewusstseins">
         </a>
         <div class="book-content">
@@ -184,9 +220,9 @@
         </div>
       </div>
 
-      <!-- Buch 3: Totenstille am Hochofen -->
+      <!-- Buch 3 -->
       <div class="book-card">
-        <a href="[amzn.eu](https://amzn.eu/d/0hazRS7U)" target="_blank" rel="noopener noreferrer" class="book-cover">
+        <a href="[amzn.eu](https://amzn.eu/d/0hazRS7U)" target="_blank" class="book-cover">
           <img src="[m.media-amazon.com](https://m.media-amazon.com/images/I/81Mbz5kNwYL._SL1500_.jpg)" alt="Cover Totenstille am Hochofen von Leon Dornfeld">
         </a>
         <div class="book-content">
