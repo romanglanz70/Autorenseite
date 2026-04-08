@@ -4,30 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Michael Braun – Autor</title>
-
   <meta name="description" content="Offizielle Autorenseite von Michael Braun – Krimis, ruhige Geschichten und Science-Fiction.">
   <link rel="icon" href="favicon.ico">
 
-  <script src="[cdn.tailwindcss.com](https://cdn.tailwindcss.com/3.4.17)"></script>
-
   <style>
     body {
-      background: linear-gradient(135deg, #faf6f1 0%, #f5e6d3 100%);
-      font-family: 'Georgia', 'Garamond', serif;
+      background: linear-gradient(135deg, #faf6f1, #f5e6d3);
+      font-family: Georgia, Garamond, serif;
       color: #5a4a42;
       margin: 0;
       padding: 0;
     }
 
-    /* ---- Hero ---- */
+    /* HERO */
     .hero {
-      background: linear-gradient(135deg, #f0d9c9 0%, #e8cdb8 100%);
+      background: linear-gradient(135deg, #f0d9c9, #e8cdb8);
       text-align: center;
       padding: 70px 20px;
-      position: relative;
     }
 
-    /* Logo mit leichtem Schimmer */
     .logo-shimmer {
       display: inline-block;
       max-width: 120px;
@@ -36,148 +31,49 @@
     }
 
     @keyframes shimmer {
-      0%   { opacity: 0.9; transform: scale(1);   filter: brightness(1); }
-      100% { opacity: 1;   transform: scale(1.04); filter: brightness(1.08); }
+      0% { opacity: 0.9; transform: scale(1); }
+      100% { opacity: 1; transform: scale(1.03); filter: brightness(1.08); }
     }
 
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: normal;
-      margin-bottom: 10px;
-    }
+    .hero h1 { font-size: 3rem; font-weight: normal; margin-bottom: 10px; }
+    .hero p.subtitle { font-style: italic; font-size: 1.2rem; color: #8b7355; margin-bottom: 20px; }
+    .hero-badge { display:inline-block; background:#d4a5a5; color:white; border-radius:25px; padding:8px 20px; }
 
-    .hero p.subtitle {
-      font-style: italic;
-      font-size: 1.2rem;
-      color: #8b7355;
-      margin-bottom: 20px;
-    }
+    /* ABSCHNITTE */
+    section.section { max-width: 1000px; margin: 0 auto; padding: 60px 20px; }
+    section h2 { text-align:center; border-bottom:2px solid #d4a5a5; padding-bottom:15px; margin-bottom:40px; font-weight:normal; }
+    .about-text { text-align: justify; line-height: 1.8; font-size: 1.1rem; color: #6b5a52; }
 
-    .hero-badge {
-      display: inline-block;
-      background: #d4a5a5;
-      color: #fff;
-      border-radius: 25px;
-      padding: 8px 20px;
-      font-size: 0.95rem;
-    }
+    /* BÜCHER */
+    .books-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; }
+    .book-card { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(90,74,66,.1); transition: .3s; }
+    .book-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(90,74,66,.2); }
+    .book-cover img { width: 100%; height: auto; display: block; }
 
-    /* ---- Standardabschnitte ---- */
-    section.section {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 60px 20px;
-    }
+    .book-content { padding: 25px; text-align: center; }
+    .book-title { font-size: 1.2rem; margin-bottom: 8px; font-weight: 600; }
+    .book-author { font-style: italic; color: #8b7355; margin-bottom: 10px; }
+    .book-genre { display:inline-block; background:#f0d9c9; border-radius:12px; padding:4px 12px; font-size:0.85rem; margin-bottom:10px; }
+    .book-link { display:inline-block; margin-top:10px; background:#d4a5a5; color:white; text-decoration:none; padding:10px 20px; border-radius:4px; transition:.3s; }
+    .book-link:hover { background:#c9949f; }
 
-    section h2 {
-      text-align: center;
-      border-bottom: 2px solid #d4a5a5;
-      padding-bottom: 15px;
-      margin-bottom: 40px;
-      font-weight: normal;
-    }
+    footer { background:#e8cdb8; text-align:center; padding:40px 20px; border-top:1px solid #d4a5a5; font-size:0.9rem; }
 
-    .about-text {
-      text-align: justify;
-      line-height: 1.8;
-      font-size: 1.1rem;
-      color: #6b5a52;
-    }
-
-    /* ---- Bücher ---- */
-    .books-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
-      margin-bottom: 40px;
-    }
-
-    .book-card {
-      background: #fff;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 15px rgba(90,74,66,.1);
-      transition: .3s;
-    }
-
-    .book-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(90,74,66,.2);
-    }
-
-    .book-cover img {
-      width: 100%;
-      display: block;
-    }
-
-    .book-content {
-      padding: 25px;
-      text-align: center;
-    }
-
-    .book-title {
-      font-size: 1.2rem;
-      margin-bottom: 8px;
-      font-weight: 600;
-    }
-
-    .book-author {
-      font-style: italic;
-      color: #8b7355;
-      margin-bottom: 10px;
-    }
-
-    .book-genre {
-      display: inline-block;
-      background: #f0d9c9;
-      border-radius: 12px;
-      padding: 4px 12px;
-      font-size: 0.85rem;
-      margin-bottom: 10px;
-    }
-
-    .book-link {
-      display: inline-block;
-      margin-top: 10px;
-      background: #d4a5a5;
-      color: white;
-      text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 4px;
-      transition: .3s;
-    }
-
-    .book-link:hover {
-      background: #c9949f;
-    }
-
-    /* ---- Kontakt & Footer ---- */
-    footer {
-      background: #e8cdb8;
-      text-align: center;
-      padding: 40px 20px;
-      border-top: 1px solid #d4a5a5;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width:768px){
-      .hero h1{font-size:2rem;}
-      section h2{font-size:1.5rem;}
-    }
+    @media (max-width:768px){ .hero h1{font-size:2rem;} section h2{font-size:1.5rem;} }
   </style>
 </head>
 
 <body>
 
-  <!-- HERO mit Logo -->
+  <!-- HERO -->
   <section class="hero">
-    <img src="Logo Romanglanz.jpg" alt="Romanglanz Logo" class="logo-shimmer">
+    <img src="LogoRomanglanz.jpg" alt="Romanglanz Logo" class="logo-shimmer">
     <h1>Michael Braun</h1>
     <p class="subtitle">Geschichten, die berühren und fesseln</p>
     <span class="hero-badge">Autor für Krimis, ruhige Geschichten &amp; Science Fiction</span>
   </section>
 
-  <!-- Über mich -->
+  <!-- ÜBER MICH -->
   <section class="section">
     <h2>Über mich</h2>
     <p class="about-text">
@@ -187,16 +83,16 @@
     </p>
   </section>
 
-  <!-- Bücher -->
+  <!-- BÜCHER -->
   <section class="section">
     <h2>Meine Bücher</h2>
+
     <div class="books-grid">
 
-      <!-- Buch 1 -->
       <div class="book-card">
-        <a href="[amzn.eu](https://amzn.eu/d/02pUsv3b)" target="_blank" class="book-cover">
-          <img src="[m.media-amazon.com](https://m.media-amazon.com/images/I/81W0eQ0NljL._SL1500_.jpg)" alt="Cover Tage am Meer von Michael Braun">
-        </a>
+        <div class="book-cover">
+          <img src="TageamMeer.jpg" alt="Tage am Meer Cover">
+        </div>
         <div class="book-content">
           <h3 class="book-title">Tage am Meer</h3>
           <p class="book-author">Michael Braun</p>
@@ -206,11 +102,10 @@
         </div>
       </div>
 
-      <!-- Buch 2 -->
       <div class="book-card">
-        <a href="[amzn.eu](https://amzn.eu/d/0ihWKbIM)" target="_blank" class="book-cover">
-          <img src="[m.media-amazon.com](https://m.media-amazon.com/images/I/81S2E-WwP3L._SL1500_.jpg)" alt="Cover Erebus – Der Algorithmus des Bewusstseins">
-        </a>
+        <div class="book-cover">
+          <img src="Erebus.jpg" alt="Erebus Cover">
+        </div>
         <div class="book-content">
           <h3 class="book-title">Erebus – Der Algorithmus des Bewusstseins</h3>
           <p class="book-author">Michael Braun</p>
@@ -220,16 +115,15 @@
         </div>
       </div>
 
-      <!-- Buch 3 -->
       <div class="book-card">
-        <a href="[amzn.eu](https://amzn.eu/d/0hazRS7U)" target="_blank" class="book-cover">
-          <img src="[m.media-amazon.com](https://m.media-amazon.com/images/I/81Mbz5kNwYL._SL1500_.jpg)" alt="Cover Totenstille am Hochofen von Leon Dornfeld">
-        </a>
+        <div class="book-cover">
+          <img src="TotenstilleamHochofen.jpg" alt="Totenstille am Hochofen Cover">
+        </div>
         <div class="book-content">
           <h3 class="book-title">Totenstille am Hochofen</h3>
           <p class="book-author">Leon Dornfeld</p>
           <span class="book-genre">Krimi</span>
-          <p>Ein spannender Dortmund-Krimi um Ermittler Leon Brandt – düster, packend, atmosphärisch.</p>
+          <p>Ein spannender Dortmund-Krimi mit düsterer Atmosphäre.</p>
           <a href="[amzn.eu](https://amzn.eu/d/0hazRS7U)" class="book-link" target="_blank">Auf Amazon ansehen</a>
         </div>
       </div>
@@ -237,7 +131,7 @@
     </div>
   </section>
 
-  <!-- Kontakt -->
+  <!-- KONTAKT -->
   <section class="section" style="background:linear-gradient(135deg,#f5e6d3,#ede0d5)">
     <h2>Kontakt</h2>
     <p style="text-align:center;color:#8b7355;font-size:1.05rem;">
@@ -248,7 +142,7 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
     <p><strong>Autor:</strong> Michael Braun</p>
     <p><strong>Adresse:</strong> Frenkingstraße 13 a, 44388 Dortmund</p>
