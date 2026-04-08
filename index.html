@@ -7,50 +7,28 @@
   <title>Michael Braun – Autor</title>
   <meta name="description" content="Offizielle Autorenseite von Michael Braun – Krimis, ruhige Geschichten und Science-Fiction.">
   <meta name="author" content="Michael Braun">
-  <meta name="keywords" content="Autor, Krimi, Science Fiction, Dortmund, Bücher, Michael Braun">
-
-  <link rel="icon" href="favicon.ico">
 
   <style>
     body {
-      background: linear-gradient(135deg, #faf6f1, #f5e6d3);
-      font-family: Georgia, Garamond, serif;
-      color: #5a4a42;
-      margin: 0;
+      margin:0;
+      font-family: Georgia, serif;
+      background:#f7efe5;
+      color:#4e3f38;
     }
 
-    .hero {
-      background: linear-gradient(135deg, #f0d9c9, #e8cdb8);
-      text-align: center;
-      padding: 70px 20px;
+    header {
+      text-align:center;
+      padding:60px 20px;
+      background:#e8cdb8;
     }
 
-    .logo-shimmer {
-      max-width: 120px;
-      margin-bottom: 20px;
-      animation: shimmer 3s infinite alternate;
-    }
-
-    @keyframes shimmer {
-      from { opacity: 0.9; transform: scale(1); }
-      to { opacity: 1; transform: scale(1.05); }
-    }
-
-    .hero h1 { font-size: 2.8rem; margin: 10px 0; }
-    .subtitle { font-style: italic; color: #8b7355; }
-    .hero-badge {
-      background:#c07c7c;
-      color:white;
-      padding:10px 20px;
-      border-radius:25px;
-      display:inline-block;
-      margin-top:15px;
-    }
+    h1 { margin:10px 0; }
+    .subtitle { font-style:italic; }
 
     section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 60px 20px;
+      max-width:1000px;
+      margin:auto;
+      padding:50px 20px;
     }
 
     h2 {
@@ -59,133 +37,99 @@
       padding-bottom:10px;
     }
 
-    .about-text {
-      text-align: justify;
-      line-height: 1.7;
-    }
-
-    .books-grid {
+    .books {
       display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
       gap:30px;
     }
 
-    .book-card {
+    .card {
       background:white;
       border-radius:10px;
       overflow:hidden;
-      box-shadow:0 4px 15px rgba(0,0,0,0.1);
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
       transition:0.3s;
     }
 
-    .book-card:hover {
-      transform: translateY(-8px) scale(1.02);
+    .card:hover {
+      transform:translateY(-8px);
     }
 
-    .book-cover img {
+    .card img {
       width:100%;
     }
 
-    .book-content {
+    .card-content {
       padding:20px;
       text-align:center;
     }
 
-    .book-title {
-      font-weight:bold;
-      margin-bottom:5px;
-    }
-
-    .book-genre {
-      background:#f0d9c9;
-      padding:5px 12px;
-      border-radius:12px;
-      font-size:0.8rem;
-    }
-
-    .book-link {
+    .btn {
       display:inline-block;
       margin-top:15px;
       background:#c07c7c;
       color:white;
-      padding:12px 22px;
+      padding:12px 20px;
       text-decoration:none;
       border-radius:6px;
-      font-weight:600;
-    }
-
-    .book-link:hover {
-      background:#a86565;
+      font-weight:bold;
     }
 
     footer {
       background:#e8cdb8;
       text-align:center;
       padding:30px;
-      font-size:0.9rem;
+      margin-top:40px;
     }
+
+    a { color:#c07c7c; }
   </style>
 </head>
 
 <body>
 
-<section class="hero">
-  <img src="LogoRomanglanz.jpg" class="logo-shimmer">
+<header>
   <h1>Michael Braun</h1>
   <p class="subtitle">Geschichten, die berühren und fesseln</p>
-  <div class="hero-badge">Krimi • Ruhe • Science Fiction</div>
-</section>
+</header>
 
 <section>
   <h2>Über mich</h2>
-  <p class="about-text">
+  <p>
     Ich bin Michael Braun und schreibe Geschichten, die unter die Haut gehen.
-    Von düsteren Krimis bis hin zu ruhigen, tiefgehenden Erzählungen und visionärer Science-Fiction.
-    Meine Bücher laden dazu ein, neue Perspektiven zu entdecken und bekannte Wahrheiten zu hinterfragen.
+    Von Krimis über ruhige Erzählungen bis hin zu Science-Fiction.
   </p>
 </section>
 
 <section>
   <h2>Meine Bücher</h2>
 
-  <div class="books-grid">
+  <div class="books">
 
-    <!-- BUCH 1 -->
-    <div class="book-card">
-      <div class="book-cover">
-        <img src="TageamMeer.jpg" alt="Tage am Meer">
-      </div>
-      <div class="book-content">
-        <div class="book-title">Tage am Meer</div>
-        <span class="book-genre">Ruhige Geschichte</span>
-        <p>Eine ruhige, berührende Erzählung über das Leben.</p>
-        <a href="https://amzn.eu/d/02pUsv3b" target="_blank" class="book-link">Jetzt ansehen</a>
+    <div class="card">
+      <img src="TageamMeer.jpg">
+      <div class="card-content">
+        <h3>Tage am Meer</h3>
+        <p>Eine ruhige, emotionale Geschichte.</p>
+        <a href="https://www.amazon.de/dp/B0GPK9DNNT" target="_blank" class="btn">Jetzt ansehen</a>
       </div>
     </div>
 
-    <!-- BUCH 2 -->
-    <div class="book-card">
-      <div class="book-cover">
-        <img src="Erebus.jpg" alt="Erebus">
-      </div>
-      <div class="book-content">
-        <div class="book-title">Erebus – Der Algorithmus</div>
-        <span class="book-genre">Science Fiction</span>
-        <p>Künstliche Intelligenz trifft auf menschliches Bewusstsein.</p>
-        <a href="https://amzn.eu/d/0ihWKbIM" target="_blank" class="book-link">Jetzt ansehen</a>
+    <div class="card">
+      <img src="Erebus.jpg">
+      <div class="card-content">
+        <h3>Erebus – Der Algorithmus</h3>
+        <p>KI und Bewusstsein in einer düsteren Zukunft.</p>
+        <a href="https://www.amazon.de/dp/B0GNT816SK" target="_blank" class="btn">Jetzt ansehen</a>
       </div>
     </div>
 
-    <!-- BUCH 3 -->
-    <div class="book-card">
-      <div class="book-cover">
-        <img src="TotenstilleamHochofen.jpg" alt="Krimi">
-      </div>
-      <div class="book-content">
-        <div class="book-title">Totenstille am Hochofen</div>
-        <span class="book-genre">Krimi</span>
-        <p>Ein düsterer Dortmund-Krimi.</p>
-        <a href="https://amzn.eu/d/0hazRS7U" target="_blank" class="book-link">Jetzt ansehen</a>
+    <div class="card">
+      <img src="TotenstilleamHochofen.jpg">
+      <div class="card-content">
+        <h3>Totenstille am Hochofen</h3>
+        <p>Düsterer Dortmund-Krimi.</p>
+        <a href="https://www.amazon.de/dp/B0GTRHJ43W" target="_blank" class="btn">Jetzt ansehen</a>
       </div>
     </div>
 
