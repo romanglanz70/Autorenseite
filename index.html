@@ -1,134 +1,146 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Michael Braun – Autor</title>
-  <meta name="description" content="Offizielle Autorenseite von Michael Braun – Krimis, ruhige Geschichten und Science-Fiction.">
-  <meta name="author" content="Michael Braun">
+<title>Michael Braun – Autor | Krimis, Science Fiction & Romane</title>
 
-  <style>
-    body {
-      margin:0;
-      font-family: Georgia, serif;
-      background:#f7efe5;
-      color:#4e3f38;
-    }
+<meta name="description" content="Bücher von Michael Braun: Krimis, Science Fiction und emotionale Geschichten. Jetzt entdecken und lesen.">
+<meta name="keywords" content="Michael Braun Autor, Krimi Dortmund, Science Fiction Buch, deutsche Romane">
+<meta name="author" content="Michael Braun">
 
-    header {
-      text-align:center;
-      padding:60px 20px;
-      background:#e8cdb8;
-    }
+<style>
+body {margin:0;font-family:Georgia;background:#f7efe5;color:#4e3f38;}
 
-    h1 { margin:10px 0; }
-    .subtitle { font-style:italic; }
+header {
+  text-align:center;
+  padding:80px 20px;
+  background:#e8cdb8;
+}
 
-    section {
-      max-width:1000px;
-      margin:auto;
-      padding:50px 20px;
-    }
+h1 {font-size:2.5rem;margin-bottom:10px;}
+.subtitle {font-style:italic;margin-bottom:20px;}
 
-    h2 {
-      text-align:center;
-      border-bottom:2px solid #c07c7c;
-      padding-bottom:10px;
-    }
+.cta {
+  background:#c07c7c;
+  color:white;
+  padding:14px 25px;
+  text-decoration:none;
+  border-radius:6px;
+  font-weight:bold;
+}
 
-    .books {
-      display:grid;
-      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-      gap:30px;
-    }
+section {max-width:1000px;margin:auto;padding:60px 20px;}
 
-    .card {
-      background:white;
-      border-radius:10px;
-      overflow:hidden;
-      box-shadow:0 4px 10px rgba(0,0,0,0.1);
-      transition:0.3s;
-    }
+h2 {
+  text-align:center;
+  border-bottom:2px solid #c07c7c;
+  padding-bottom:10px;
+}
 
-    .card:hover {
-      transform:translateY(-8px);
-    }
+.books {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
 
-    .card img {
-      width:100%;
-    }
+.card {
+  background:white;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 4px 15px rgba(0,0,0,0.1);
+  transition:0.3s;
+}
 
-    .card-content {
-      padding:20px;
-      text-align:center;
-    }
+.card:hover {transform:translateY(-8px) scale(1.02);}
 
-    .btn {
-      display:inline-block;
-      margin-top:15px;
-      background:#c07c7c;
-      color:white;
-      padding:12px 20px;
-      text-decoration:none;
-      border-radius:6px;
-      font-weight:bold;
-    }
+.card img {width:100%;cursor:pointer;}
 
-    footer {
-      background:#e8cdb8;
-      text-align:center;
-      padding:30px;
-      margin-top:40px;
-    }
+.card-content {padding:20px;text-align:center;}
 
-    a { color:#c07c7c; }
-  </style>
+.btn {
+  display:inline-block;
+  margin-top:15px;
+  background:#c07c7c;
+  color:white;
+  padding:12px 20px;
+  text-decoration:none;
+  border-radius:6px;
+  font-weight:bold;
+}
+
+.highlight {
+  text-align:center;
+  font-size:1.2rem;
+  margin-bottom:30px;
+}
+
+footer {
+  background:#e8cdb8;
+  text-align:center;
+  padding:30px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1>Michael Braun</h1>
-  <p class="subtitle">Geschichten, die berühren und fesseln</p>
+  <h1>Michael Braun – Autor</h1>
+  <p class="subtitle">Krimis, Science Fiction und Geschichten mit Tiefe</p>
+  <a href="#buecher" class="cta">Jetzt Bücher entdecken</a>
 </header>
 
 <section>
-  <h2>Über mich</h2>
+  <h2>Über den Autor</h2>
   <p>
-    Ich bin Michael Braun und schreibe Geschichten, die unter die Haut gehen.
-    Von Krimis über ruhige Erzählungen bis hin zu Science-Fiction.
+    Michael Braun schreibt fesselnde Krimis, ruhige Erzählungen und visionäre Science Fiction.
+    Seine Geschichten verbinden Spannung mit Tiefe und bleiben lange im Kopf.
   </p>
 </section>
 
-<section>
+<section id="buecher">
   <h2>Meine Bücher</h2>
+
+  <p class="highlight">
+    Entdecke meine aktuellen Bücher direkt auf Amazon:
+  </p>
 
   <div class="books">
 
+    <!-- Tage am Meer -->
     <div class="card">
-      <img src="TageamMeer.jpg">
+      <a href="https://www.amazon.de/dp/B0GPK9DNNT" target="_blank">
+        <img src="TageamMeer.jpg" alt="Tage am Meer Buch">
+      </a>
       <div class="card-content">
         <h3>Tage am Meer</h3>
-        <p>Eine ruhige, emotionale Geschichte.</p>
+        <p>Eine emotionale Geschichte über Verlust und Neuanfang.</p>
         <a href="https://www.amazon.de/dp/B0GPK9DNNT" target="_blank" class="btn">Jetzt ansehen</a>
       </div>
     </div>
 
+    <!-- Erebus -->
     <div class="card">
-      <img src="Erebus.jpg">
+      <a href="https://www.amazon.de/dp/B0GNT816SK" target="_blank">
+        <img src="Erebus.jpg" alt="Erebus Buch">
+      </a>
       <div class="card-content">
         <h3>Erebus – Der Algorithmus</h3>
-        <p>KI und Bewusstsein in einer düsteren Zukunft.</p>
+        <p>KI, Bewusstsein und eine düstere Zukunft.</p>
         <a href="https://www.amazon.de/dp/B0GNT816SK" target="_blank" class="btn">Jetzt ansehen</a>
       </div>
     </div>
 
+    <!-- Krimi -->
     <div class="card">
-      <img src="TotenstilleamHochofen.jpg">
+      <a href="https://www.amazon.de/dp/B0GTRHJ43W" target="_blank">
+        <img src="TotenstilleamHochofen.jpg" alt="Dortmund Krimi">
+      </a>
       <div class="card-content">
         <h3>Totenstille am Hochofen</h3>
-        <p>Düsterer Dortmund-Krimi.</p>
+        <p>Düsterer Dortmund-Krimi mit Spannung.</p>
         <a href="https://www.amazon.de/dp/B0GTRHJ43W" target="_blank" class="btn">Jetzt ansehen</a>
       </div>
     </div>
