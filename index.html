@@ -1,164 +1,153 @@
 <!doctype html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Michael Braun – Autor</title>
+  <meta name="description" content="Offizielle Autorenseite von Michael Braun – Krimis, ruhige Geschichten und Science-Fiction.">
+  <link rel="icon" href="favicon.ico">
 
-<title>Michael Braun – Autor | Krimis, Science Fiction & Romane</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #faf6f1, #f5e6d3);
+      font-family: Georgia, Garamond, serif;
+      color: #5a4a42;
+      margin: 0;
+      padding: 0;
+    }
 
-<meta name="description" content="Bücher von Michael Braun: Krimis, Science Fiction und emotionale Geschichten. Jetzt entdecken und lesen.">
-<meta name="keywords" content="Michael Braun Autor, Krimi Dortmund, Science Fiction Buch, deutsche Romane">
-<meta name="author" content="Michael Braun">
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #f0d9c9, #e8cdb8);
+      text-align: center;
+      padding: 70px 20px;
+    }
 
-<style>
-body {margin:0;font-family:Georgia;background:#f7efe5;color:#4e3f38;}
+    .logo-shimmer {
+      display: inline-block;
+      max-width: 120px;
+      margin-bottom: 20px;
+      animation: shimmer 3.5s ease-in-out infinite alternate;
+    }
 
-header {
-  text-align:center;
-  padding:80px 20px;
-  background:#e8cdb8;
-}
+    @keyframes shimmer {
+      0% { opacity: 0.9; transform: scale(1); }
+      100% { opacity: 1; transform: scale(1.03); filter: brightness(1.08); }
+    }
 
-h1 {font-size:2.5rem;margin-bottom:10px;}
-.subtitle {font-style:italic;margin-bottom:20px;}
+    .hero h1 { font-size: 3rem; font-weight: normal; margin-bottom: 10px; }
+    .hero p.subtitle { font-style: italic; font-size: 1.2rem; color: #8b7355; margin-bottom: 20px; }
+    .hero-badge { display:inline-block; background:#d4a5a5; color:white; border-radius:25px; padding:8px 20px; }
 
-.cta {
-  background:#c07c7c;
-  color:white;
-  padding:14px 25px;
-  text-decoration:none;
-  border-radius:6px;
-  font-weight:bold;
-}
+    /* ABSCHNITTE */
+    section.section { max-width: 1000px; margin: 0 auto; padding: 60px 20px; }
+    section h2 { text-align:center; border-bottom:2px solid #d4a5a5; padding-bottom:15px; margin-bottom:40px; font-weight:normal; }
+    .about-text { text-align: justify; line-height: 1.8; font-size: 1.1rem; color: #6b5a52; }
 
-section {max-width:1000px;margin:auto;padding:60px 20px;}
+    /* BÜCHER */
+    .books-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; }
+    .book-card { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(90,74,66,.1); transition: .3s; }
+    .book-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(90,74,66,.2); }
+    .book-cover img { width: 100%; height: auto; display: block; }
 
-h2 {
-  text-align:center;
-  border-bottom:2px solid #c07c7c;
-  padding-bottom:10px;
-}
+    .book-content { padding: 25px; text-align: center; }
+    .book-title { font-size: 1.2rem; margin-bottom: 8px; font-weight: 600; }
+    .book-author { font-style: italic; color: #8b7355; margin-bottom: 10px; }
+    .book-genre { display:inline-block; background:#f0d9c9; border-radius:12px; padding:4px 12px; font-size:0.85rem; margin-bottom:10px; }
+    .book-link { display:inline-block; margin-top:10px; background:#d4a5a5; color:white; text-decoration:none; padding:10px 20px; border-radius:4px; transition:.3s; }
+    .book-link:hover { background:#c9949f; }
 
-.books {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
-}
+    footer { background:#e8cdb8; text-align:center; padding:40px 20px; border-top:1px solid #d4a5a5; font-size:0.9rem; }
 
-.card {
-  background:white;
-  border-radius:10px;
-  overflow:hidden;
-  box-shadow:0 4px 15px rgba(0,0,0,0.1);
-  transition:0.3s;
-}
-
-.card:hover {transform:translateY(-8px) scale(1.02);}
-
-.card img {width:100%;cursor:pointer;}
-
-.card-content {padding:20px;text-align:center;}
-
-.btn {
-  display:inline-block;
-  margin-top:15px;
-  background:#c07c7c;
-  color:white;
-  padding:12px 20px;
-  text-decoration:none;
-  border-radius:6px;
-  font-weight:bold;
-}
-
-.highlight {
-  text-align:center;
-  font-size:1.2rem;
-  margin-bottom:30px;
-}
-
-footer {
-  background:#e8cdb8;
-  text-align:center;
-  padding:30px;
-}
-</style>
+    @media (max-width:768px){ .hero h1{font-size:2rem;} section h2{font-size:1.5rem;} }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Michael Braun – Autor</h1>
-  <p class="subtitle">Krimis, Science Fiction und Geschichten mit Tiefe</p>
-  <a href="#buecher" class="cta">Jetzt Bücher entdecken</a>
-</header>
+  <!-- HERO -->
+  <section class="hero">
+    <img src="LogoRomanglanz.jpg" alt="Romanglanz Logo" class="logo-shimmer">
+    <h1>Michael Braun</h1>
+    <p class="subtitle">Geschichten, die berühren und fesseln</p>
+    <span class="hero-badge">Autor für Krimis, ruhige Geschichten &amp; Science Fiction</span>
+  </section>
 
-<section>
-  <h2>Über den Autor</h2>
-  <p>
-    Michael Braun schreibt fesselnde Krimis, ruhige Erzählungen und visionäre Science Fiction.
-    Seine Geschichten verbinden Spannung mit Tiefe und bleiben lange im Kopf.
-  </p>
-</section>
+  <!-- ÜBER MICH -->
+  <section class="section">
+    <h2>Über mich</h2>
+    <p class="about-text">
+      Willkommen auf meiner Autorenseite! Ich bin Michael Braun und schreibe Geschichten, die in die Seele gehen.
+      Ob packende Kriminalromane, beruhigende Erzählungen oder visionäre Science-Fiction –
+      meine Werke laden dich ein, neue Welten zu entdecken und alte Wahrheiten zu hinterfragen.
+    </p>
+  </section>
 
-<section id="buecher">
-  <h2>Meine Bücher</h2>
+  <!-- BÜCHER -->
+  <section class="section">
+    <h2>Meine Bücher</h2>
 
-  <p class="highlight">
-    Entdecke meine aktuellen Bücher direkt auf Amazon:
-  </p>
+    <div class="books-grid">
 
-  <div class="books">
-
-    <!-- Tage am Meer -->
-    <div class="card">
-      <a href="https://www.amazon.de/dp/B0GPK9DNNT" target="_blank">
-        <img src="TageamMeer.jpg" alt="Tage am Meer Buch">
-      </a>
-      <div class="card-content">
-        <h3>Tage am Meer</h3>
-        <p>Eine emotionale Geschichte über Verlust und Neuanfang.</p>
-        <a href="https://www.amazon.de/dp/B0GPK9DNNT" target="_blank" class="btn">Jetzt ansehen</a>
+      <div class="book-card">
+        <div class="book-cover">
+          <img src="TageamMeer.jpg" alt="Tage am Meer Cover">
+        </div>
+        <div class="book-content">
+          <h3 class="book-title">Tage am Meer</h3>
+          <p class="book-author">Michael Braun</p>
+          <span class="book-genre">Ruhige Geschichte</span>
+          <p>Eine berührende Erzählung über Momente, die das Leben verändern.</p>
+          <a href="[amzn.eu](https://amzn.eu/d/02pUsv3b)" class="book-link" target="_blank">Auf Amazon ansehen</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Erebus -->
-    <div class="card">
-      <a href="https://www.amazon.de/dp/B0GNT816SK" target="_blank">
-        <img src="Erebus.jpg" alt="Erebus Buch">
-      </a>
-      <div class="card-content">
-        <h3>Erebus – Der Algorithmus</h3>
-        <p>KI, Bewusstsein und eine düstere Zukunft.</p>
-        <a href="https://www.amazon.de/dp/B0GNT816SK" target="_blank" class="btn">Jetzt ansehen</a>
+      <div class="book-card">
+        <div class="book-cover">
+          <img src="Erebus.jpg" alt="Erebus Cover">
+        </div>
+        <div class="book-content">
+          <h3 class="book-title">Erebus – Der Algorithmus des Bewusstseins</h3>
+          <p class="book-author">Michael Braun</p>
+          <span class="book-genre">Science Fiction</span>
+          <p>Eine visionäre Geschichte über künstliche Intelligenz und menschliches Bewusstsein.</p>
+          <a href="[amzn.eu](https://amzn.eu/d/0ihWKbIM)" class="book-link" target="_blank">Auf Amazon ansehen</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Krimi -->
-    <div class="card">
-      <a href="https://www.amazon.de/dp/B0GTRHJ43W" target="_blank">
-        <img src="TotenstilleamHochofen.jpg" alt="Dortmund Krimi">
-      </a>
-      <div class="card-content">
-        <h3>Totenstille am Hochofen</h3>
-        <p>Düsterer Dortmund-Krimi mit Spannung.</p>
-        <a href="https://www.amazon.de/dp/B0GTRHJ43W" target="_blank" class="btn">Jetzt ansehen</a>
+      <div class="book-card">
+        <div class="book-cover">
+          <img src="TotenstilleamHochofen.jpg" alt="Totenstille am Hochofen Cover">
+        </div>
+        <div class="book-content">
+          <h3 class="book-title">Totenstille am Hochofen</h3>
+          <p class="book-author">Leon Dornfeld</p>
+          <span class="book-genre">Krimi</span>
+          <p>Ein spannender Dortmund-Krimi mit düsterer Atmosphäre.</p>
+          <a href="[amzn.eu](https://amzn.eu/d/0hazRS7U)" class="book-link" target="_blank">Auf Amazon ansehen</a>
+        </div>
       </div>
+
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- KONTAKT -->
+  <section class="section" style="background:linear-gradient(135deg,#f5e6d3,#ede0d5)">
+    <h2>Kontakt</h2>
+    <p style="text-align:center;color:#8b7355;font-size:1.05rem;">
+      Hast du Fragen, Anregungen oder möchtest mit mir in Kontakt treten?
+    </p>
+    <div style="text-align:center;">
+      <p>📧 <a href="mailto:romanglanz70@gmail.com" style="color:#d4a5a5;text-decoration:none;">romanglanz70@gmail.com</a></p>
+    </div>
+  </section>
 
-<section>
-  <h2>Kontakt</h2>
-  <p style="text-align:center;">
-    📧 <a href="mailto:romanglanz70@gmail.com">romanglanz70@gmail.com</a>
-  </p>
-</section>
-
-<footer>
-  <p>© 2024 Michael Braun</p>
-  <p><a href="impressum.html">Impressum</a></p>
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    <p><strong>Autor:</strong> Michael Braun</p>
+    <p><strong>Adresse:</strong> Frenkingstraße 13 a, 44388 Dortmund</p>
+    <p style="margin-top:20px;font-size:0.85rem;">© 2024 Michael Braun. Alle Rechte vorbehalten.</p>
+  </footer>
 
 </body>
 </html>
