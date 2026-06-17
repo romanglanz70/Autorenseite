@@ -1,148 +1,198 @@
-<!doctype html>
+```html
+<!DOCTYPE html>
 <html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Michael Braun – Autor | Krimi Dortmund, Science Fiction & Romane</title>
-<meta name="description" content="Michael Braun alias Leon Dornfeld – Autor für Krimis aus Dortmund, Science Fiction und emotionale Romane. Jetzt entdecken.">
+<title>Michael Braun | Autor & Schriftsteller</title>
+
+<meta name="description" content="Michael Braun alias Leon Dornfeld. Krimis aus Dortmund, Science-Fiction, Romane, Kinderbücher und Grillbücher.">
 
 <style>
-body {
-  margin:0;
-  font-family: Arial, sans-serif;
-  background:#f7efe5;
-  color:#333;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-header {
-  background:#1e1e1e;
-  color:white;
-  text-align:center;
-  padding:80px 20px;
+body{
+    font-family:'Segoe UI',Arial,sans-serif;
+    background:#f8f5f0;
+    color:#333;
+    line-height:1.6;
 }
 
-header h1 {
-  margin:0;
-  font-size:2.5rem;
+header{
+    background:linear-gradient(135deg,#8b1e3f,#d35400);
+    color:white;
+    text-align:center;
+    padding:100px 20px;
 }
 
-header p {
-  margin-top:10px;
-  opacity:0.8;
+header h1{
+    font-size:3rem;
+    margin-bottom:15px;
 }
 
-nav {
-  background:#c07c7c;
-  text-align:center;
-  padding:15px;
+header p{
+    font-size:1.2rem;
 }
 
-nav a {
-  color:white;
-  margin:0 15px;
-  text-decoration:none;
-  font-weight:bold;
+nav{
+    background:#2c3e50;
+    text-align:center;
+    padding:15px;
+    position:sticky;
+    top:0;
+    z-index:100;
 }
 
-section {
-  max-width:1100px;
-  margin:auto;
-  padding:60px 20px;
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 20px;
+    font-weight:bold;
 }
 
-h2 {
-  text-align:center;
-  margin-bottom:30px;
+nav a:hover{
+    color:#f39c12;
 }
 
-.books {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:30px;
+section{
+    max-width:1200px;
+    margin:auto;
+    padding:70px 20px;
 }
 
-.card {
-  background:white;
-  border-radius:10px;
-  overflow:hidden;
-  box-shadow:0 5px 20px rgba(0,0,0,0.1);
-  transition:0.3s;
+h2{
+    text-align:center;
+    margin-bottom:40px;
+    color:#8b1e3f;
+    font-size:2rem;
 }
 
-.card:hover {
-  transform:translateY(-5px);
+.about{
+    max-width:800px;
+    margin:auto;
+    text-align:center;
+    font-size:1.1rem;
 }
 
-.card img {
-  width:100%;
+.books{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
 }
 
-.card-content {
-  padding:20px;
-  text-align:center;
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,0.12);
+    transition:0.3s;
 }
 
-.btn {
-  display:inline-block;
-  margin-top:15px;
-  background:#c07c7c;
-  color:white;
-  padding:12px 20px;
-  text-decoration:none;
-  border-radius:6px;
+.card:hover{
+    transform:translateY(-8px);
 }
 
-.about {
-  text-align:center;
-  max-width:700px;
-  margin:auto;
+.card img{
+    width:100%;
+    height:430px;
+    object-fit:cover;
 }
 
-footer {
-  background:#1e1e1e;
-  color:white;
-  text-align:center;
-  padding:40px 20px;
+.card-content{
+    padding:25px;
+    text-align:center;
 }
 
-footer a {
-  color:#c07c7c;
-  text-decoration:none;
-  margin:0 10px;
+.card-content h3{
+    margin-bottom:10px;
 }
+
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    background:#d35400;
+    color:white;
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#e67e22;
+}
+
+.contact{
+    text-align:center;
+}
+
+footer{
+    background:#2c3e50;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+footer a{
+    color:#f39c12;
+    text-decoration:none;
+}
+
+footer a:hover{
+    text-decoration:underline;
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-<h1>Michael Braun</h1>
-<p>Autor für Krimi, Science Fiction & emotionale Romane</p>
-<p><i>alias Leon Dornfeld</i></p>
+    <h1>Michael Braun</h1>
+    <p>Autor für Krimis, Science-Fiction, Kinderbücher und Sachbücher</p>
+    <p><em>alias Leon Dornfeld</em></p>
 </header>
 
 <nav>
-<a href="#about">Über mich</a>
-<a href="#books">Bücher</a>
-<a href="#contact">Kontakt</a>
+    <a href="#about">Über mich</a>
+    <a href="#books">Bücher</a>
+    <a href="#contact">Kontakt</a>
 </nav>
 
 <section id="about">
-<h2>Über mich</h2>
-<p class="about">
-Michael Braun ist ein Autor aus dem Ruhrpott. Er schreibt Sciene Fiction und ruhige tiefgehende Romane.
-  Unter dem Pseudonym enstehen Romane die in Dortmund und Umgebung spielen.
-</p>
+    <h2>Über mich</h2>
+
+    <div class="about">
+        <p>
+            Michael Braun schreibt spannende Krimis, Science-Fiction-Romane,
+            Kinderbücher und praxisnahe Sachbücher. Unter dem Pseudonym
+            <strong>Leon Dornfeld</strong> entstehen vor allem Krimis mit
+            regionalem Bezug zu Dortmund und dem Ruhrgebiet.
+        </p>
+
+        <br>
+
+        <p>
+            Geschichten, die berühren, Spannung erzeugen und Menschen
+            unterhalten – das steht im Mittelpunkt meiner Arbeit.
+        </p>
+    </div>
 </section>
 
 <section id="books">
+
 <h2>Meine Bücher</h2>
 
 <div class="books">
 
 <div class="card">
-<img src="TageamMeer.jpg" alt="Roman Tage am Meer">
+<img src="TageamMeer.jpg" alt="Tage am Meer">
 <div class="card-content">
 <h3>Tage am Meer</h3>
 <p>Ein emotionaler Roman über Verlust und Neuanfang.</p>
@@ -151,7 +201,7 @@ Michael Braun ist ein Autor aus dem Ruhrpott. Er schreibt Sciene Fiction und ruh
 </div>
 
 <div class="card">
-<img src="Erebus.jpg" alt="Erebus Buch">
+<img src="Erebus.jpg" alt="Erebus">
 <div class="card-content">
 <h3>Erebus – Der Algorithmus des Bewusstseins</h3>
 <p>Science Fiction über KI und die Zukunft des Menschen.</p>
@@ -160,7 +210,7 @@ Michael Braun ist ein Autor aus dem Ruhrpott. Er schreibt Sciene Fiction und ruh
 </div>
 
 <div class="card">
-<img src="TotenstilleamHochofen.jpg" alt="Dortmund Krimi">
+<img src="TotenstilleamHochofen.jpg" alt="Totenstille am Hochofen">
 <div class="card-content">
 <h3>Totenstille am Hochofen</h3>
 <p>Düsterer Krimi aus Dortmund.</p>
@@ -168,45 +218,49 @@ Michael Braun ist ein Autor aus dem Ruhrpott. Er schreibt Sciene Fiction und ruh
 </div>
 </div>
 
+<div class="card">
+<img src="covertolino.jpg" alt="Dein erstes Mal am Rost">
+<div class="card-content">
+<h3>Dein erstes Mal am Rost</h3>
+<p>Einfach. Echt. Gelingsicher. Der praktische Einstieg in die Welt des Grillens.</p>
+<a href="https://amzn.eu/d/01gC3nYC" target="_blank" class="btn">Jetzt ansehen</a>
 </div>
+</div>
+
+<div class="card">
+<img src="ChatGPT-Bild 18. Mai 2026, 11_26_29(1).jpg" alt="Rudi Regenwurm">
+<div class="card-content">
+<h3>Rudi Regenwurm, Moni Marienkäfer und Bella Biene</h3>
+<p>Das ruhige Kinderhörbuch zum Einschlafen.</p>
+<a href="https://amzn.eu/d/0c5OCb6C" target="_blank" class="btn">Jetzt ansehen</a>
+</div>
+</div>
+
+</div>
+
 </section>
-
-
-<div class="card">
-    <img src="covertolino.jpg" alt="Dein erstes Mal am Rost">
-    <div class="card-content">
-        <h3>Dein erstes Mal am Rost</h3>
-        <p>Einfach. Echt. Gelingsicher. Der praktische Einstieg in die Welt des Grillens.</p>
-        <a href="https://amzn.eu/d/01gC3nYC" target="_blank" class="btn">Jetzt ansehen</a>
-    </div>
-</div>
-
-<div class="card">
-    <img src="ChatGPT-Bild 18. Mai 2026, 11_26_29(1).jpg" alt="Rudi Regenwurm, Moni Marienkäfer und Bella Biene">
-    <div class="card-content">
-        <h3>Rudi Regenwurm, Moni Marienkäfer und Bella Biene</h3>
-        <p>Eine liebevolle Geschichte über Freundschaft, Mut und Abenteuer.</p>
-        <a href="https://amzn.eu/d/0c5OCb6C" target="_blank" class="btn">Jetzt ansehen</a>
-    </div>
-</div>
 
 <section id="contact">
 
 <h2>Kontakt</h2>
-<p style="text-align:center;">
+
+<div class="contact">
 📧 <a href="mailto:romanglanz70@gmail.com">romanglanz70@gmail.com</a>
-</p>
+</div>
+
 </section>
 
 <footer>
 <p>© 2026 Michael Braun</p>
-<p>Frenkingstraße 13a, 44388 Dortmund</p>
+<p>Frenkingstraße 13a · 44388 Dortmund</p>
 
 <p>
 <a href="impressum.html">Impressum</a> |
 <a href="datenschutz.html">Datenschutz</a>
 </p>
+
 </footer>
 
 </body>
 </html>
+```
