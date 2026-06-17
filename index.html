@@ -1,12 +1,16 @@
+```html
 <!DOCTYPE html>
 <html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Michael Braun | Autor</title>
+<title>Michael Braun | Autor & Schriftsteller</title>
 
-<meta name="description" content="Michael Braun alias Leon Dornfeld – Autor für Krimis, Science Fiction, Kinderbücher und Sachbücher.">
+<meta name="description" content="Michael Braun alias Leon Dornfeld – Autor für Krimis, Science-Fiction, Kinderbücher und Grillbücher.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <style>
 
@@ -14,29 +18,39 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
 body{
-font-family:'Segoe UI',Arial,sans-serif;
-background:#f4f4f4;
-color:#222;
-line-height:1.6;
+font-family:'Segoe UI',sans-serif;
+background:#f8fafc;
+color:#334155;
+line-height:1.7;
 }
 
-/* HEADER */
+/* HERO */
 
 .hero{
-background:linear-gradient(rgba(17,24,39,.85),rgba(17,24,39,.85)),
-url("https://images.unsplash.com/photo-1512820790803-83ca734da794?w=1600");
+background:
+linear-gradient(
+135deg,
+rgba(15,23,42,.92),
+rgba(30,41,59,.88)
+),
+url("https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1800&q=80");
+
 background-size:cover;
 background-position:center;
-height:600px;
+
+min-height:90vh;
+
 display:flex;
-justify-content:center;
 align-items:center;
+justify-content:center;
+
 text-align:center;
+padding:40px;
 color:white;
-padding:20px;
 }
 
 .hero-content{
@@ -44,63 +58,66 @@ max-width:900px;
 }
 
 .hero h1{
-font-size:4rem;
+font-size:clamp(3rem,8vw,5.5rem);
+font-weight:800;
 margin-bottom:20px;
 }
 
-.hero p{
-font-size:1.3rem;
+.hero .subtitle{
+font-size:1.5rem;
 margin-bottom:10px;
 }
 
-.alias{
-color:#f59e0b;
-font-style:italic;
+.hero .alias{
+font-size:1.2rem;
+color:#fbbf24;
+margin-bottom:35px;
 }
-
-/* BUTTONS */
 
 .hero-buttons{
-margin-top:35px;
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
 }
 
-.hero-buttons a{
-display:inline-block;
-margin:10px;
-padding:15px 30px;
-border-radius:8px;
+.btn-primary,
+.btn-secondary{
+padding:16px 32px;
+border-radius:12px;
 text-decoration:none;
-font-weight:bold;
+font-weight:700;
+transition:.3s;
 }
 
-.primary-btn{
+.btn-primary{
 background:#f59e0b;
 color:white;
 }
 
-.primary-btn:hover{
+.btn-primary:hover{
 background:#d97706;
 }
 
-.secondary-btn{
+.btn-secondary{
 border:2px solid white;
 color:white;
 }
 
-.secondary-btn:hover{
+.btn-secondary:hover{
 background:white;
-color:#111827;
+color:#0f172a;
 }
 
 /* NAV */
 
 nav{
-background:#111827;
-padding:18px;
-text-align:center;
+background:#0f172a;
 position:sticky;
 top:0;
-z-index:1000;
+z-index:999;
+padding:18px;
+text-align:center;
 }
 
 nav a{
@@ -111,32 +128,65 @@ font-weight:600;
 }
 
 nav a:hover{
-color:#f59e0b;
+color:#fbbf24;
 }
 
 /* SECTIONS */
 
 section{
-max-width:1200px;
+max-width:1300px;
 margin:auto;
-padding:80px 20px;
+padding:90px 20px;
 }
 
 h2{
 text-align:center;
 margin-bottom:40px;
-font-size:2.2rem;
-color:#111827;
+font-size:2.4rem;
+color:#0f172a;
 }
 
+/* ABOUT */
+
 .about{
-max-width:850px;
+max-width:900px;
 margin:auto;
 text-align:center;
 font-size:1.15rem;
 }
 
-/* BOOK GRID */
+/* HIGHLIGHT */
+
+.highlight{
+background:linear-gradient(135deg,#1e293b,#0f172a);
+color:white;
+border-radius:24px;
+padding:60px 40px;
+text-align:center;
+box-shadow:0 20px 50px rgba(0,0,0,.15);
+}
+
+.highlight h3{
+font-size:2rem;
+margin-bottom:20px;
+}
+
+.stats{
+display:flex;
+justify-content:center;
+gap:60px;
+margin-top:40px;
+flex-wrap:wrap;
+}
+
+.stat span{
+font-size:3rem;
+font-weight:800;
+color:#f59e0b;
+display:block;
+}
+
+/* BOOKS */
 
 .books{
 display:grid;
@@ -146,14 +196,17 @@ gap:35px;
 
 .card{
 background:white;
-border-radius:18px;
+border-radius:24px;
 overflow:hidden;
-box-shadow:0 10px 30px rgba(0,0,0,.12);
-transition:.3s;
+
+box-shadow:
+0 15px 35px rgba(0,0,0,.08);
+
+transition:.35s;
 }
 
 .card:hover{
-transform:translateY(-8px);
+transform:translateY(-10px);
 }
 
 .card img{
@@ -164,23 +217,24 @@ display:block;
 }
 
 .card-content{
-padding:25px;
+padding:28px;
 text-align:center;
 }
 
 .card-content h3{
 margin-bottom:15px;
+color:#0f172a;
 }
 
 .btn{
 display:inline-block;
 margin-top:15px;
+padding:14px 28px;
 background:#f59e0b;
 color:white;
-padding:12px 25px;
-border-radius:8px;
 text-decoration:none;
-font-weight:bold;
+border-radius:10px;
+font-weight:700;
 }
 
 .btn:hover{
@@ -197,19 +251,37 @@ font-size:1.1rem;
 /* FOOTER */
 
 footer{
-background:#111827;
+background:#0f172a;
 color:white;
 text-align:center;
-padding:50px 20px;
+padding:60px 20px;
 }
 
 footer a{
-color:#f59e0b;
+color:#fbbf24;
 text-decoration:none;
 }
 
 footer a:hover{
 text-decoration:underline;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero{
+min-height:75vh;
+}
+
+.stats{
+gap:30px;
+}
+
+.card img{
+height:400px;
+}
+
 }
 
 </style>
@@ -218,20 +290,26 @@ text-decoration:underline;
 <body>
 
 <header class="hero">
+
 <div class="hero-content">
 
 <h1>Michael Braun</h1>
 
-<p>Autor für Krimis, Science Fiction, Kinderbücher und Sachbücher</p>
+<p class="subtitle">
+Autor für Krimis, Science-Fiction, Kinderbücher und Grillbücher
+</p>
 
-<p class="alias">alias Leon Dornfeld</p>
+<p class="alias">
+alias Leon Dornfeld
+</p>
 
 <div class="hero-buttons">
-<a href="#books" class="primary-btn">Bücher entdecken</a>
-<a href="#about" class="secondary-btn">Über mich</a>
+<a href="#books" class="btn-primary">Bücher entdecken</a>
+<a href="#about" class="btn-secondary">Über mich</a>
 </div>
 
 </div>
+
 </header>
 
 <nav>
@@ -246,10 +324,45 @@ text-decoration:underline;
 
 <p class="about">
 Michael Braun schreibt unter seinem Namen sowie unter dem Pseudonym Leon Dornfeld.
-Sein Repertoire reicht von spannenden Krimis aus dem Ruhrgebiet über Science-Fiction-Romane
-bis hin zu Kinderbüchern und Sachbüchern rund um das Grillen.
-Im Mittelpunkt seiner Geschichten stehen Menschen, Emotionen und außergewöhnliche Ideen.
+Sein Repertoire reicht von spannenden Krimis aus Dortmund über Science-Fiction-Romane
+bis hin zu Kinderbüchern und praxisnahen Grillbüchern.
+Im Mittelpunkt stehen Geschichten, die unterhalten, bewegen und in Erinnerung bleiben.
 </p>
+
+</section>
+
+<section>
+
+<div class="highlight">
+
+<h3>Geschichten mit Herz, Spannung und Fantasie</h3>
+
+<p>
+Ob Krimi, Science Fiction, Kinderbuch oder Grillratgeber –
+jedes Buch entsteht mit Leidenschaft und dem Ziel,
+Lesern besondere Momente zu schenken.
+</p>
+
+<div class="stats">
+
+<div class="stat">
+<span>5+</span>
+Veröffentlichungen
+</div>
+
+<div class="stat">
+<span>4</span>
+Genres
+</div>
+
+<div class="stat">
+<span>100%</span>
+Leidenschaft
+</div>
+
+</div>
+
+</div>
 
 </section>
 
@@ -281,7 +394,7 @@ Im Mittelpunkt seiner Geschichten stehen Menschen, Emotionen und außergewöhnli
 <img src="TotenstilleamHochofen.jpg" alt="Totenstille am Hochofen">
 <div class="card-content">
 <h3>Totenstille am Hochofen</h3>
-<p>Ein düsterer Krimi aus Dortmund.</p>
+<p>Düsterer Dortmund-Krimi.</p>
 <a href="https://www.amazon.de/dp/B0GTRHJ43W" target="_blank" class="btn">Jetzt ansehen</a>
 </div>
 </div>
@@ -290,7 +403,7 @@ Im Mittelpunkt seiner Geschichten stehen Menschen, Emotionen und außergewöhnli
 <img src="grillen.jpg" alt="Dein erstes Mal am Rost">
 <div class="card-content">
 <h3>Dein erstes Mal am Rost</h3>
-<p>Einfach. Echt. Gelingsicher. Der praktische Einstieg in die Welt des Grillens.</p>
+<p>Einfach. Echt. Gelingsicher. Der praktische Einstieg ins Grillen.</p>
 <a href="https://amzn.eu/d/01gC3nYC" target="_blank" class="btn">Jetzt ansehen</a>
 </div>
 </div>
@@ -322,7 +435,7 @@ Im Mittelpunkt seiner Geschichten stehen Menschen, Emotionen und außergewöhnli
 
 <p>© 2026 Michael Braun</p>
 
-<p>Frenkingstraße 13a, 44388 Dortmund</p>
+<p>Frenkingstraße 13a · 44388 Dortmund</p>
 
 <br>
 
@@ -333,3 +446,4 @@ Im Mittelpunkt seiner Geschichten stehen Menschen, Emotionen und außergewöhnli
 
 </body>
 </html>
+```
