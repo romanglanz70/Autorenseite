@@ -1,151 +1,215 @@
-```html
 <!DOCTYPE html>
 <html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Michael Braun | Autor & Schriftsteller</title>
+<title>Michael Braun | Autor</title>
 
-<meta name="description" content="Michael Braun alias Leon Dornfeld. Krimis aus Dortmund, Science-Fiction, Romane, Kinderbücher und Grillbücher.">
+<meta name="description" content="Michael Braun alias Leon Dornfeld – Autor für Krimis, Science Fiction, Kinderbücher und Sachbücher.">
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-    font-family:'Segoe UI',Arial,sans-serif;
-    background:#f8f5f0;
-    color:#333;
-    line-height:1.6;
+font-family:'Segoe UI',Arial,sans-serif;
+background:#f4f4f4;
+color:#222;
+line-height:1.6;
 }
 
-header{
-    background:linear-gradient(135deg,#8b1e3f,#d35400);
-    color:white;
-    text-align:center;
-    padding:100px 20px;
+/* HEADER */
+
+.hero{
+background:linear-gradient(rgba(17,24,39,.85),rgba(17,24,39,.85)),
+url("https://images.unsplash.com/photo-1512820790803-83ca734da794?w=1600");
+background-size:cover;
+background-position:center;
+height:600px;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
 }
 
-header h1{
-    font-size:3rem;
-    margin-bottom:15px;
+.hero-content{
+max-width:900px;
 }
 
-header p{
-    font-size:1.2rem;
+.hero h1{
+font-size:4rem;
+margin-bottom:20px;
 }
+
+.hero p{
+font-size:1.3rem;
+margin-bottom:10px;
+}
+
+.alias{
+color:#f59e0b;
+font-style:italic;
+}
+
+/* BUTTONS */
+
+.hero-buttons{
+margin-top:35px;
+}
+
+.hero-buttons a{
+display:inline-block;
+margin:10px;
+padding:15px 30px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.primary-btn{
+background:#f59e0b;
+color:white;
+}
+
+.primary-btn:hover{
+background:#d97706;
+}
+
+.secondary-btn{
+border:2px solid white;
+color:white;
+}
+
+.secondary-btn:hover{
+background:white;
+color:#111827;
+}
+
+/* NAV */
 
 nav{
-    background:#2c3e50;
-    text-align:center;
-    padding:15px;
-    position:sticky;
-    top:0;
-    z-index:100;
+background:#111827;
+padding:18px;
+text-align:center;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 20px;
-    font-weight:bold;
+color:white;
+text-decoration:none;
+margin:0 20px;
+font-weight:600;
 }
 
 nav a:hover{
-    color:#f39c12;
+color:#f59e0b;
 }
 
+/* SECTIONS */
+
 section{
-    max-width:1200px;
-    margin:auto;
-    padding:70px 20px;
+max-width:1200px;
+margin:auto;
+padding:80px 20px;
 }
 
 h2{
-    text-align:center;
-    margin-bottom:40px;
-    color:#8b1e3f;
-    font-size:2rem;
+text-align:center;
+margin-bottom:40px;
+font-size:2.2rem;
+color:#111827;
 }
 
 .about{
-    max-width:800px;
-    margin:auto;
-    text-align:center;
-    font-size:1.1rem;
+max-width:850px;
+margin:auto;
+text-align:center;
+font-size:1.15rem;
 }
 
+/* BOOK GRID */
+
 .books{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:30px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:35px;
 }
 
 .card{
-    background:white;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 8px 25px rgba(0,0,0,0.12);
-    transition:0.3s;
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.12);
+transition:.3s;
 }
 
 .card:hover{
-    transform:translateY(-8px);
+transform:translateY(-8px);
 }
 
 .card img{
-    width:100%;
-    height:430px;
-    object-fit:cover;
+width:100%;
+height:500px;
+object-fit:cover;
+display:block;
 }
 
 .card-content{
-    padding:25px;
-    text-align:center;
+padding:25px;
+text-align:center;
 }
 
 .card-content h3{
-    margin-bottom:10px;
+margin-bottom:15px;
 }
 
 .btn{
-    display:inline-block;
-    margin-top:15px;
-    background:#d35400;
-    color:white;
-    text-decoration:none;
-    padding:12px 25px;
-    border-radius:8px;
-    transition:0.3s;
+display:inline-block;
+margin-top:15px;
+background:#f59e0b;
+color:white;
+padding:12px 25px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
 }
 
 .btn:hover{
-    background:#e67e22;
+background:#d97706;
 }
+
+/* CONTACT */
 
 .contact{
-    text-align:center;
+text-align:center;
+font-size:1.1rem;
 }
 
+/* FOOTER */
+
 footer{
-    background:#2c3e50;
-    color:white;
-    text-align:center;
-    padding:40px 20px;
+background:#111827;
+color:white;
+text-align:center;
+padding:50px 20px;
 }
 
 footer a{
-    color:#f39c12;
-    text-decoration:none;
+color:#f59e0b;
+text-decoration:none;
 }
 
 footer a:hover{
-    text-decoration:underline;
+text-decoration:underline;
 }
 
 </style>
@@ -153,36 +217,40 @@ footer a:hover{
 
 <body>
 
-<header>
-    <h1>Michael Braun</h1>
-    <p>Autor für Krimis, Science-Fiction, Kinderbücher und Sachbücher</p>
-    <p><em>alias Leon Dornfeld</em></p>
+<header class="hero">
+<div class="hero-content">
+
+<h1>Michael Braun</h1>
+
+<p>Autor für Krimis, Science Fiction, Kinderbücher und Sachbücher</p>
+
+<p class="alias">alias Leon Dornfeld</p>
+
+<div class="hero-buttons">
+<a href="#books" class="primary-btn">Bücher entdecken</a>
+<a href="#about" class="secondary-btn">Über mich</a>
+</div>
+
+</div>
 </header>
 
 <nav>
-    <a href="#about">Über mich</a>
-    <a href="#books">Bücher</a>
-    <a href="#contact">Kontakt</a>
+<a href="#about">Über mich</a>
+<a href="#books">Bücher</a>
+<a href="#contact">Kontakt</a>
 </nav>
 
 <section id="about">
-    <h2>Über mich</h2>
 
-    <div class="about">
-        <p>
-            Michael Braun schreibt spannende Krimis, Science-Fiction-Romane,
-            Kinderbücher und praxisnahe Sachbücher. Unter dem Pseudonym
-            <strong>Leon Dornfeld</strong> entstehen vor allem Krimis mit
-            regionalem Bezug zu Dortmund und dem Ruhrgebiet.
-        </p>
+<h2>Über mich</h2>
 
-        <br>
+<p class="about">
+Michael Braun schreibt unter seinem Namen sowie unter dem Pseudonym Leon Dornfeld.
+Sein Repertoire reicht von spannenden Krimis aus dem Ruhrgebiet über Science-Fiction-Romane
+bis hin zu Kinderbüchern und Sachbüchern rund um das Grillen.
+Im Mittelpunkt seiner Geschichten stehen Menschen, Emotionen und außergewöhnliche Ideen.
+</p>
 
-        <p>
-            Geschichten, die berühren, Spannung erzeugen und Menschen
-            unterhalten – das steht im Mittelpunkt meiner Arbeit.
-        </p>
-    </div>
 </section>
 
 <section id="books">
@@ -195,7 +263,7 @@ footer a:hover{
 <img src="TageamMeer.jpg" alt="Tage am Meer">
 <div class="card-content">
 <h3>Tage am Meer</h3>
-<p>Ein emotionaler Roman über Verlust und Neuanfang.</p>
+<p>Ein emotionaler Roman über Verlust, Hoffnung und Neuanfang.</p>
 <a href="https://www.amazon.de/dp/B0GPK9DNNT" target="_blank" class="btn">Jetzt ansehen</a>
 </div>
 </div>
@@ -204,7 +272,7 @@ footer a:hover{
 <img src="Erebus.jpg" alt="Erebus">
 <div class="card-content">
 <h3>Erebus – Der Algorithmus des Bewusstseins</h3>
-<p>Science Fiction über KI und die Zukunft des Menschen.</p>
+<p>Science-Fiction über künstliche Intelligenz und die Zukunft des Menschen.</p>
 <a href="https://www.amazon.de/dp/B0GNT816SK" target="_blank" class="btn">Jetzt ansehen</a>
 </div>
 </div>
@@ -213,13 +281,13 @@ footer a:hover{
 <img src="TotenstilleamHochofen.jpg" alt="Totenstille am Hochofen">
 <div class="card-content">
 <h3>Totenstille am Hochofen</h3>
-<p>Düsterer Krimi aus Dortmund.</p>
+<p>Ein düsterer Krimi aus Dortmund.</p>
 <a href="https://www.amazon.de/dp/B0GTRHJ43W" target="_blank" class="btn">Jetzt ansehen</a>
 </div>
 </div>
 
 <div class="card">
-<img src="covertolino.jpg" alt="Dein erstes Mal am Rost">
+<img src="grillen.jpg" alt="Dein erstes Mal am Rost">
 <div class="card-content">
 <h3>Dein erstes Mal am Rost</h3>
 <p>Einfach. Echt. Gelingsicher. Der praktische Einstieg in die Welt des Grillens.</p>
@@ -228,10 +296,10 @@ footer a:hover{
 </div>
 
 <div class="card">
-<img src="ChatGPT-Bild 18. Mai 2026, 11_26_29(1).jpg" alt="Rudi Regenwurm">
+<img src="rudi.jpg" alt="Rudi Regenwurm">
 <div class="card-content">
 <h3>Rudi Regenwurm, Moni Marienkäfer und Bella Biene</h3>
-<p>Das ruhige Kinderhörbuch zum Einschlafen.</p>
+<p>Das ruhige Kinderbuch zum Einschlafen.</p>
 <a href="https://amzn.eu/d/0c5OCb6C" target="_blank" class="btn">Jetzt ansehen</a>
 </div>
 </div>
@@ -251,16 +319,17 @@ footer a:hover{
 </section>
 
 <footer>
-<p>© 2026 Michael Braun</p>
-<p>Frenkingstraße 13a · 44388 Dortmund</p>
 
-<p>
+<p>© 2026 Michael Braun</p>
+
+<p>Frenkingstraße 13a, 44388 Dortmund</p>
+
+<br>
+
 <a href="impressum.html">Impressum</a> |
 <a href="datenschutz.html">Datenschutz</a>
-</p>
 
 </footer>
 
 </body>
 </html>
-```
