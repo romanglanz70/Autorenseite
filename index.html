@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -261,7 +260,7 @@ display:block;
 
 .books{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));
 gap:35px;
 }
 
@@ -489,59 +488,59 @@ Leidenschaft
          aria-label="Buch suchen">
 
   <div class="filter-buttons">
-    <button class="active" data-genre="alle">Alle</button>
-    <button data-genre="krimi">Krimi</button>
-    <button data-genre="science-fiction">Science-Fiction</button>
-    <button data-genre="kinderbuch">Kinderbuch</button>
-    <button data-genre="roman">Roman</button>
-    <button data-genre="ratgeber">Ratgeber</button>
+    <button type="button" class="active" data-genre="alle" aria-pressed="true">Alle</button>
+    <button type="button" data-genre="krimi" aria-pressed="false">Krimi</button>
+    <button type="button" data-genre="science-fiction" aria-pressed="false">Science-Fiction</button>
+    <button type="button" data-genre="kinderbuch" aria-pressed="false">Kinderbuch</button>
+    <button type="button" data-genre="roman" aria-pressed="false">Roman</button>
+    <button type="button" data-genre="ratgeber" aria-pressed="false">Ratgeber</button>
   </div>
 </div>
 
 <div class="books">
 
-<div class="card" data-genre="kinderbuch">
+<div class="card" data-genre="roman">
 <img src="TageamMeer.jpg" alt="Tage am Meer">
 <div class="card-content">
 <h3>Tage am Meer</h3>
 <p>Ein emotionaler Roman über Verlust, Hoffnung und Neuanfang.</p>
-<a href="https://www.amazon.de/dp/B0GPK9DNNT" target="_blank" class="btn">Jetzt ansehen</a>
+<a href="https://www.amazon.de/dp/B0GPK9DNNT" target="_blank" rel="noopener noreferrer" class="btn">Jetzt ansehen</a>
 </div>
 </div>
 
-<div class="card">
+<div class="card" data-genre="science-fiction">
 <img src="Erebus.jpg" alt="Erebus">
 <div class="card-content">
 <h3>Erebus – Der Algorithmus des Bewusstseins</h3>
 <p>Science-Fiction über künstliche Intelligenz und die Zukunft des Menschen.</p>
-<a href="https://www.amazon.de/dp/B0GNT816SK" target="_blank" class="btn">Jetzt ansehen</a>
+<a href="https://www.amazon.de/dp/B0GNT816SK" target="_blank" rel="noopener noreferrer" class="btn">Jetzt ansehen</a>
 </div>
 </div>
 
-<div class="card">
+<div class="card" data-genre="krimi">
 <img src="TotenstilleamHochofen.jpg" alt="Totenstille am Hochofen">
 <div class="card-content">
 <h3>Totenstille am Hochofen</h3>
-<p>Ein Dortmund-Krimi aus dem Ruhrgebiet: Auf einem alten Industriegelände in Dortmund wird die Leiche eines einflussreichen Bauunternehmers entdeckt. Der pensionierte Hauptkommissar Leon Brandt gerät in einen Fall, der tief in die Vergangenheit des Ruhrgebiets führt. Totenstille am Hochofen von Leon Dornfeld verbindet Mordermittlung, Dortmunder Lokalkolorit und die raue Industriekulisse des Reviers..</p>
-<a href="https://www.amazon.de/dp/B0GTRHJ43W" target="_blank" class="btn">Jetzt ansehen</a>
+<p>Ein Dortmund-Krimi aus dem Ruhrgebiet: Auf einem alten Industriegelände in Dortmund wird die Leiche eines einflussreichen Bauunternehmers entdeckt. Der pensionierte Hauptkommissar Leon Brandt gerät in einen Fall, der tief in die Vergangenheit des Ruhrgebiets führt. Totenstille am Hochofen von Leon Dornfeld verbindet Mordermittlung, Dortmunder Lokalkolorit und die raue Industriekulisse des Reviers.</p>
+<a href="https://www.amazon.de/dp/B0GTRHJ43W" target="_blank" rel="noopener noreferrer" class="btn">Jetzt ansehen</a>
 </div>
 </div>
 
-<div class="card">
+<div class="card" data-genre="ratgeber">
 <img src="grillen.jpg" alt="Dein erstes Mal am Rost">
 <div class="card-content">
 <h3>Dein erstes Mal am Rost</h3>
 <p>Einfach. Echt. Gelingsicher. Der praktische Einstieg ins Grillen.</p>
-<a href="https://amzn.eu/d/01gC3nYC" target="_blank" class="btn">Jetzt ansehen</a>
+<a href="https://amzn.eu/d/01gC3nYC" target="_blank" rel="noopener noreferrer" class="btn">Jetzt ansehen</a>
 </div>
 </div>
 
-<div class="card">
+<div class="card" data-genre="kinderbuch">
 <img src="rudi.jpg" alt="Rudi Regenwurm">
 <div class="card-content">
 <h3>Rudi Regenwurm, Moni Marienkäfer und Bella Biene</h3>
 <p>Das ruhige Kinderbuch zum Einschlafen.</p>
-<a href="https://amzn.eu/d/0c5OCb6C" target="_blank" class="btn">Jetzt ansehen</a>
+<a href="https://amzn.eu/d/0c5OCb6C" target="_blank" rel="noopener noreferrer" class="btn">Jetzt ansehen</a>
 </div>
 </div>
 
@@ -601,7 +600,11 @@ buttons.forEach(button => {
   button.addEventListener("click", () => {
     selectedGenre = button.dataset.genre;
 
-    buttons.forEach(b => b.classList.remove("active"));
+    buttons.forEach(b => {
+      b.classList.remove("active");
+      b.setAttribute("aria-pressed", "false");
+    });
+    button.setAttribute("aria-pressed", "true");
     button.classList.add("active");
 
     filterBooks();
@@ -613,4 +616,3 @@ search.addEventListener("input", filterBooks);
 
 </body>
 </html>
-```
