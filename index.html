@@ -1,666 +1,817 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google-site-verification" content="eDKIe1j3achrQfFrcz8Ft_Ni2HRs5EwAXMjlMFlopV4" />
-
-  <title>Michael Braun – Autor aus Dortmund | Krimi, Science-Fiction, Kinderbücher & Romane</title>
-  <meta name="description" content="Michael Braun aus Dortmund – Autor für Krimis, Science-Fiction, Kinderbücher, Romane und Grillbücher. Entdecke seine Bücher auf Romanglanz.">
-  <link rel="canonical" href="https://romanglanz.de/">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="eDKIe1j3achrQfFrcz8Ft_Ni2HRs5EwAXMjlMFlopV4" />
+<title>Michael Braun – Autor aus Dortmund | Krimi, Science-Fiction & Kinderbücher</title>
+<meta name="description" content="Michael Braun aus Dortmund – Autor für Krimis, Science-Fiction, Kinderbücher und Grillbücher. Entdecke seine Bücher auf Romanglanz.">
+<link rel="canonical" href="https://romanglanz.de/">
+ <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Michael Braun",
+    "url": "https://romanglanz.de/",
+    "jobTitle": "Autor",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dortmund",
+      "addressCountry": "DE"
+    }
+  }
+}
+</script> 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Book",
+      "name": "Tage am Meer",
+      "author": {
+        "@type": "Person",
+        "name": "Michael Braun"
+      },
+      "url": "https://www.amazon.de/dp/B0GPK9DNNT"
+    },
+    {
+      "@type": "Book",
+      "name": "Erebus – Der Algorithmus des Bewusstseins",
+      "author": {
+        "@type": "Person",
+        "name": "Michael Braun"
+      },
+      "url": "https://www.amazon.de/dp/B0GNT816SK"
+    },
+    {
+      "@type": "Book",
+      "name": "Rudi Regenwurm, Moni Marienkäfer und Bella Biene",
+      "author": {
+        "@type": "Person",
+        "name": "Michael Braun"
+      },
+      "url": "https://amzn.eu/d/0c5OCb6C"
+    },
+    {
+      "@type": "Book",
+      "name": "Dein erstes Mal am Rost",
+      "author": {
+        "@type": "Person",
+        "name": "Michael Braun"
+      }
+    },
+    {
+      "@type": "Book",
+      "name": "Totenstille am Hochofen",
+      "author": {
+        "@type": "Person",
+        "name": "Leon Dornfeld"
+      }
+    }
+  ]
+}
+</script> 
   <meta property="og:title" content="Michael Braun – Autor aus Dortmund">
-  <meta property="og:description" content="Michael Braun aus Dortmund – Autor für Krimis, Science-Fiction, Kinderbücher, Romane und Grillbücher.">
-  <meta property="og:url" content="https://romanglanz.de/">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://romanglanz.de/Homepage.png">
+<meta property="og:description" content="Michael Braun aus Dortmund – Autor für Krimis, Science-Fiction, Kinderbücher und Grillbücher.">
+<meta property="og:url" content="https://romanglanz.de/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://romanglanz.de/Homepage.png"> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfilePage",
-    "mainEntity": {
-      "@type": "Person",
-      "name": "Michael Braun",
-      "url": "https://romanglanz.de/",
-      "jobTitle": "Autor",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Dortmund",
-        "addressCountry": "DE"
-      }
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Segoe UI',sans-serif;
+background:#f8fafc;
+color:#334155;
+line-height:1.7;
+}
+
+/* HERO */
+
+.hero{
+background:
+linear-gradient(
+135deg,
+rgba(15,23,42,.92),
+rgba(30,41,59,.88)
+),
+url("https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1800&q=80");
+
+background-size:cover;
+background-position:center;
+
+min-height:90vh;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+text-align:center;
+padding:40px;
+color:white;
+}
+
+.hero-content{
+max-width:900px;
+}
+
+.hero h1{
+font-size:clamp(3rem,8vw,5.5rem);
+font-weight:800;
+margin-bottom:20px;
+}
+
+.hero .subtitle{
+font-size:1.5rem;
+margin-bottom:10px;
+}
+
+.hero .alias{
+font-size:1.2rem;
+color:#fbbf24;
+margin-bottom:35px;
+}
+
+.hero-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn-primary,
+.btn-secondary{
+padding:16px 32px;
+border-radius:12px;
+text-decoration:none;
+font-weight:700;
+transition:.3s;
+}
+
+.btn-primary{
+background:#f59e0b;
+color:white;
+}
+
+.btn-primary:hover{
+background:#d97706;
+}
+
+.btn-secondary{
+border:2px solid white;
+color:white;
+}
+
+.btn-secondary:hover{
+background:white;
+color:#0f172a;
+}
+
+/* NAV */
+
+nav{
+background:#0f172a;
+position:sticky;
+top:0;
+z-index:999;
+padding:18px;
+text-align:center;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 20px;
+font-weight:600;
+}
+
+nav a:hover{
+color:#fbbf24;
+}
+
+/* SECTIONS */
+
+section{
+max-width:1300px;
+margin:auto;
+padding:90px 20px;
+}
+
+h2{
+text-align:center;
+margin-bottom:40px;
+font-size:2.4rem;
+color:#0f172a;
+}
+
+/* ABOUT */
+
+.about{
+max-width:900px;
+margin:auto;
+text-align:center;
+font-size:1.15rem;
+}
+
+/* HIGHLIGHT */
+
+.highlight{
+background:linear-gradient(135deg,#1e293b,#0f172a);
+color:white;
+border-radius:24px;
+padding:60px 40px;
+text-align:center;
+box-shadow:0 20px 50px rgba(0,0,0,.15);
+}
+
+.highlight h3{
+font-size:2rem;
+margin-bottom:20px;
+}
+
+.stats{
+display:flex;
+justify-content:center;
+gap:60px;
+margin-top:40px;
+flex-wrap:wrap;
+}
+
+.stat span{
+font-size:3rem;
+font-weight:800;
+color:#f59e0b;
+display:block;
+}
+
+/* BOOKS */
+
+.books{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));
+gap:35px;
+}
+
+.card{
+background:white;
+border-radius:24px;
+overflow:hidden;
+
+box-shadow:
+0 15px 35px rgba(0,0,0,.08);
+
+transition:.35s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:500px;
+object-fit:cover;
+display:block;
+}
+
+.card-content{
+padding:28px;
+text-align:center;
+}
+
+.card-content h3{
+margin-bottom:15px;
+color:#0f172a;
+}
+
+.btn{
+display:inline-block;
+margin-top:15px;
+padding:14px 28px;
+background:#f59e0b;
+color:white;
+text-decoration:none;
+border-radius:10px;
+font-weight:700;
+}
+
+.btn:hover{
+background:#d97706;
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+font-size:1.1rem;
+}
+
+/* FOOTER */
+
+footer{
+background:#0f172a;
+color:white;
+text-align:center;
+padding:60px 20px;
+}
+
+footer a{
+color:#fbbf24;
+text-decoration:none;
+}
+
+footer a:hover{
+text-decoration:underline;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero{
+min-height:75vh;
+}
+
+.stats{
+gap:30px;
+}
+
+.card img{
+height:400px;
+}
+
+}
+
+.book-filters {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+#book-search {
+  width: 100%;
+  padding: 16px 20px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  font: inherit;
+  margin-bottom: 20px;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-buttons button {
+  padding: 10px 18px;
+  border: 1px solid #cbd5e1;
+  border-radius: 30px;
+  background: white;
+  color: #0f172a;
+  cursor: pointer;
+  font: inherit;
+}
+
+.filter-buttons button.active,
+.filter-buttons button:hover {
+ background: #25864b;
+  color: white;
+}
+
+.card[hidden] {
+  display: none;
+}
+
+/* Freundliche Farben für Romanglanz */
+
+body {
+  background: #fffaf2;
+  color: #334155;
+}
+
+nav {
+  background: #ffffff;
+  box-shadow: 0 2px 15px rgba(0,0,0,.08);
+}
+
+nav a {
+  color: #17365d;
+}
+
+nav a:hover {
+  color: #d97706;
+}
+
+
+.hero {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,250,242,0.25),
+      rgba(255,250,242,0.05)
+    ),
+    url("Titelbild-homepage.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #17365d;
+}
+
+
+.hero .alias {
+  color: #b86e00;
+}
+
+.btn-secondary {
+  border-color: #17365d;
+  color: #17365d;
+}
+
+h2, .card-content h3 {
+  color: #17365d;
+}
+
+.highlight {
+  background: linear-gradient(135deg,#eaf5ff,#fff0d6);
+  color: #17365d;
+}
+
+.stat span {
+  color: #d97706;
+}
+
+.btn, .btn-primary {
+  background: #e9940b;
+  color: white;
+}
+
+.filter-buttons button.active,
+.filter-buttons button:hover {
+  background: #25864b;
+  color: white;
+}
+
+footer {
+  background: #17365d;
+}
+
+/* Einheitliche Buchkarten */
+
+.books {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, 320px), 1fr)
+  );
+  gap: 35px;
+  align-items: stretch;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card img {
+  width: 100%;
+  height: 450px;
+  object-fit: contain;
+  background: #fff;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 28px;
+  text-align: center;
+}
+
+.card-content p {
+  margin-bottom: 24px;
+}
+
+.card-content .btn {
+  margin-top: auto;
+  align-self: center;
+}
+
+.book-badge {
+  display: inline-block;
+  align-self: center;
+  background: #fef3c7;
+  color: #92400e;
+  border-radius: 20px;
+  padding: 7px 14px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+.coming-soon-btn {
+  background: #64748b;
+  color: white;
+  cursor: default;
+}
+
+
+/* HERO AUFGERÄUMT: Das Titelbild enthält bereits Name, Unterzeile, Button und Kategorien.
+   Deshalb werden keine zusätzlichen Texte darübergelegt. */
+.hero {
+  position: relative;
+  min-height: 0;
+  height: auto;
+  aspect-ratio: 1917 / 718;
+  padding: 0;
+  display: block;
+  background-image: url("Titelbild-homepage.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: inherit;
+}
+
+.hero-content {
+  display: none;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    aspect-ratio: 1917 / 718;
+    background-size: cover;
+    background-position: center center;
   }
-  </script>
+}
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Book",
-        "name": "Tage am Meer",
-        "author": {
-          "@type": "Person",
-          "name": "Michael Braun"
-        },
-        "url": "https://www.amazon.de/dp/B0GPK9DNNT"
-      },
-      {
-        "@type": "Book",
-        "name": "Erebus – Der Algorithmus des Bewusstseins",
-        "author": {
-          "@type": "Person",
-          "name": "Michael Braun"
-        },
-        "url": "https://www.amazon.de/dp/B0GNT816SK"
-      },
-      {
-        "@type": "Book",
-        "name": "Rudi Regenwurm, Moni Marienkäfer und Bella Biene",
-        "author": {
-          "@type": "Person",
-          "name": "Michael Braun"
-        },
-        "url": "https://amzn.eu/d/0c5OCb6C"
-      },
-      {
-        "@type": "Book",
-        "name": "Dein erstes Mal am Rost",
-        "author": {
-          "@type": "Person",
-          "name": "Michael Braun"
-        },
-        "url": "https://amzn.eu/d/01gC3nYC"
-      },
-      {
-        "@type": "Book",
-        "name": "Totenstille am Hochofen",
-        "author": {
-          "@type": "Person",
-          "name": "Michael Braun"
-        },
-        "url": "https://www.amazon.de/dp/B0GTRHJ43W"
-      },
-      {
-        "@type": "Book",
-        "name": "Der Blitz",
-        "author": {
-          "@type": "Person",
-          "name": "Michael Braun"
-        }
-      }
-    ]
-  }
-  </script>
-
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      scroll-behavior:smooth;
-    }
-
-    body{
-      font-family:'Segoe UI',sans-serif;
-      background:#fffaf2;
-      color:#334155;
-      line-height:1.7;
-    }
-
-    nav{
-      background:#ffffff;
-      position:sticky;
-      top:0;
-      z-index:999;
-      padding:18px;
-      text-align:center;
-      box-shadow:0 2px 15px rgba(0,0,0,.08);
-    }
-
-    nav a{
-      color:#17365d;
-      text-decoration:none;
-      margin:0 20px;
-      font-weight:600;
-    }
-
-    nav a:hover{
-      color:#d97706;
-    }
-
-    .hero{
-      background:
-        linear-gradient(
-          90deg,
-          rgba(255,250,242,0.25),
-          rgba(255,250,242,0.05)
-        ),
-        url("Titelbild-homepage.png");
-      background-size:cover;
-      background-position:center;
-      background-repeat:no-repeat;
-      min-height:90vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      padding:40px;
-      color:#17365d;
-    }
-
-    .hero-content{
-      max-width:900px;
-    }
-
-    .hero h1{
-      font-size:clamp(3rem,8vw,5.5rem);
-      font-weight:800;
-      margin-bottom:20px;
-    }
-
-    .hero .subtitle{
-      font-size:1.5rem;
-      margin-bottom:20px;
-    }
-
-    .hero .intro{
-      font-size:1.15rem;
-      max-width:760px;
-      margin:0 auto 35px;
-    }
-
-    .hero-buttons{
-      display:flex;
-      justify-content:center;
-      gap:20px;
-      flex-wrap:wrap;
-    }
-
-    .btn-primary,
-    .btn-secondary{
-      padding:16px 32px;
-      border-radius:12px;
-      text-decoration:none;
-      font-weight:700;
-      transition:.3s;
-      display:inline-block;
-    }
-
-    .btn-primary{
-      background:#e9940b;
-      color:white;
-    }
-
-    .btn-primary:hover{
-      background:#d97706;
-    }
-
-    .btn-secondary{
-      border:2px solid #17365d;
-      color:#17365d;
-      background:rgba(255,255,255,0.7);
-    }
-
-    .btn-secondary:hover{
-      background:#17365d;
-      color:white;
-    }
-
-    section{
-      max-width:1300px;
-      margin:auto;
-      padding:90px 20px;
-    }
-
-    h2{
-      text-align:center;
-      margin-bottom:40px;
-      font-size:2.4rem;
-      color:#17365d;
-    }
-
-    .about{
-      max-width:900px;
-      margin:auto;
-      text-align:center;
-      font-size:1.15rem;
-    }
-
-    .highlight{
-      background:linear-gradient(135deg,#eaf5ff,#fff0d6);
-      color:#17365d;
-      border-radius:24px;
-      padding:60px 40px;
-      text-align:center;
-      box-shadow:0 20px 50px rgba(0,0,0,.15);
-    }
-
-    .highlight h3{
-      font-size:2rem;
-      margin-bottom:20px;
-    }
-
-    .stats{
-      display:flex;
-      justify-content:center;
-      gap:60px;
-      margin-top:40px;
-      flex-wrap:wrap;
-    }
-
-    .stat span{
-      font-size:3rem;
-      font-weight:800;
-      color:#d97706;
-      display:block;
-    }
-
-    .book-filters {
-      max-width: 900px;
-      margin: 0 auto 40px;
-      text-align: center;
-    }
-
-    #book-search {
-      width: 100%;
-      padding: 16px 20px;
-      border: 1px solid #cbd5e1;
-      border-radius: 12px;
-      font: inherit;
-      margin-bottom: 20px;
-    }
-
-    .filter-buttons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .filter-buttons button {
-      padding: 10px 18px;
-      border: 1px solid #cbd5e1;
-      border-radius: 30px;
-      background: white;
-      color: #0f172a;
-      cursor: pointer;
-      font: inherit;
-    }
-
-    .filter-buttons button.active,
-    .filter-buttons button:hover {
-      background: #25864b;
-      color: white;
-    }
-
-    .card[hidden] {
-      display: none;
-    }
-
-    .books {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
-      gap: 35px;
-      align-items: stretch;
-    }
-
-    .card{
-      background:white;
-      border-radius:24px;
-      overflow:hidden;
-      box-shadow:0 15px 35px rgba(0,0,0,.08);
-      transition:.35s;
-      display:flex;
-      flex-direction:column;
-      height:100%;
-    }
-
-    .card:hover{
-      transform:translateY(-10px);
-    }
-
-    .card img{
-      width:100%;
-      height:450px;
-      object-fit:contain;
-      background:#fff;
-      display:block;
-    }
-
-    .card-content{
-      display:flex;
-      flex-direction:column;
-      flex:1;
-      padding:28px;
-      text-align:center;
-    }
-
-    .card-content h3{
-      margin-bottom:15px;
-      color:#17365d;
-    }
-
-    .card-content p{
-      margin-bottom:24px;
-    }
-
-    .btn{
-      display:inline-block;
-      margin-top:auto;
-      align-self:center;
-      padding:14px 28px;
-      background:#e9940b;
-      color:white;
-      text-decoration:none;
-      border-radius:10px;
-      font-weight:700;
-    }
-
-    .btn:hover{
-      background:#d97706;
-    }
-
-    .book-badge {
-      display: inline-block;
-      align-self: center;
-      background: #fef3c7;
-      color: #92400e;
-      border-radius: 20px;
-      padding: 7px 14px;
-      font-size: 0.85rem;
-      font-weight: bold;
-      margin-bottom: 18px;
-    }
-
-    .coming-soon-btn {
-      background: #64748b;
-      color: white;
-      cursor: default;
-    }
-
-    .contact{
-      text-align:center;
-      font-size:1.1rem;
-    }
-
-    footer{
-      background:#17365d;
-      color:white;
-      text-align:center;
-      padding:60px 20px;
-    }
-
-    footer a{
-      color:#fbbf24;
-      text-decoration:none;
-    }
-
-    footer a:hover{
-      text-decoration:underline;
-    }
-
-    @media(max-width:768px){
-      .hero{
-        min-height:75vh;
-      }
-
-      .stats{
-        gap:30px;
-      }
-
-      .card img{
-        height:400px;
-      }
-    }
-  </style>
+</style>
 </head>
 
 <body>
 
-  <header class="hero">
-    <div class="hero-content">
-      <h1>Michael Braun</h1>
+<header class="hero" aria-label="Michael Braun – Autor aus Dortmund">
+  <h1 class="visually-hidden">Michael Braun – Autor aus Dortmund</h1>
+</header>
 
-      <p class="subtitle">
-        Autor aus Dortmund für Krimis, Science-Fiction, Kinderbücher, Romane und Grillbücher
-      </p>
+<nav>
+<a href="#about">Über mich</a>
+<a href="#books">Bücher</a>
+<a href="#contact">Kontakt</a>
+</nav>
 
-      <p class="intro">
-        Geschichten mit Spannung, Fantasie und Herz – von packenden Krimis über
-        Science-Fiction bis hin zu Kinderbüchern und praxisnahen Ratgebern.
-      </p>
+<section id="about">
 
-      <div class="hero-buttons">
-        <a href="#books" class="btn-primary">Bücher entdecken</a>
-        <a href="#about" class="btn-secondary">Über mich</a>
-      </div>
-    </div>
-  </header>
+<h2>Über mich</h2>
 
-  <nav>
-    <a href="#about">Über mich</a>
-    <a href="#books">Bücher</a>
-    <a href="#contact">Kontakt</a>
-  </nav>
+<p class="about">
+Michael Braun schreibt spannende Krimis aus Dortmund, Science-Fiction-Romane, Kinderbücher, Romane und praxisnahe Grillbücher.
+Im Mittelpunkt stehen Geschichten, die unterhalten, bewegen und in Erinnerung bleiben.
+</p>
 
-  <section id="about">
-    <h2>Über mich</h2>
-    <p class="about">
-      Michael Braun schreibt Geschichten in unterschiedlichen Genres –
-      von spannenden Krimis aus Dortmund über Science-Fiction-Romane
-      bis hin zu Kinderbüchern und praxisnahen Grillbüchern.
-      Im Mittelpunkt stehen Bücher, die unterhalten, berühren
-      und in Erinnerung bleiben.
-    </p>
-  </section>
+</section>
 
-  <section>
-    <div class="highlight">
-      <h3>Geschichten mit Herz, Spannung und Fantasie</h3>
+<section>
 
-      <p>
-        Ob Krimi, Science-Fiction, Kinderbuch, Roman oder Grillratgeber –
-        jedes Buch entsteht mit Leidenschaft und dem Ziel,
-        Leserinnen und Lesern besondere Momente zu schenken.
-      </p>
+<div class="highlight">
 
-      <div class="stats">
-        <div class="stat">
-          <span>5+</span>
-          Veröffentlichungen
-        </div>
+<h3>Geschichten mit Herz, Spannung und Fantasie</h3>
 
-        <div class="stat">
-          <span>4</span>
-          Genres
-        </div>
+<p>
+Ob Krimi, Science Fiction, Kinderbuch oder Grillratgeber –
+jedes Buch entsteht mit Leidenschaft und dem Ziel,
+Lesern besondere Momente zu schenken.
+</p>
 
-        <div class="stat">
-          <span>100%</span>
-          Leidenschaft
-        </div>
-      </div>
-    </div>
-  </section>
+<div class="stats">
 
-  <section id="books">
-    <h2>Meine Bücher</h2>
+<div class="stat">
+<span>5+</span>
+Veröffentlichungen
+</div>
 
-    <div class="book-filters" aria-label="Bücher nach Genre filtern">
-      <input
-        type="search"
-        id="book-search"
-        placeholder="Buch suchen …"
-        aria-label="Buch suchen"
-      >
+<div class="stat">
+<span>4</span>
+Genres
+</div>
 
-      <div class="filter-buttons">
-        <button type="button" class="active" data-genre="alle" aria-pressed="true">Alle</button>
-        <button type="button" data-genre="krimi" aria-pressed="false">Krimi</button>
-        <button type="button" data-genre="science-fiction" aria-pressed="false">Science-Fiction</button>
-        <button type="button" data-genre="kinderbuch" aria-pressed="false">Kinderbuch</button>
-        <button type="button" data-genre="roman" aria-pressed="false">Roman</button>
-        <button type="button" data-genre="ratgeber" aria-pressed="false">Ratgeber</button>
-      </div>
-    </div>
+<div class="stat">
+<span>100%</span>
+Leidenschaft
+</div>
 
-    <div class="books">
+</div>
 
-      <div class="card" data-genre="roman">
-        <img src="TageamMeer.jpg" alt="Tage am Meer">
-        <div class="card-content">
-          <h3>Tage am Meer</h3>
-          <p>
-            Ein Roman über Verlust, Hoffnung und die Kraft eines Neuanfangs.
-            Vor der Weite des Meeres entfaltet sich eine bewegende Geschichte
-            über Erinnerungen, menschliche Nähe und den Mut,
-            dem Leben eine neue Richtung zu geben.
-          </p>
-          <a href="https://www.amazon.de/dp/B0GPK9DNNT" target="_blank" rel="noopener noreferrer" class="btn">Jetzt ansehen</a>
-        </div>
-      </div>
+</div>
 
-      <div class="card" data-genre="science-fiction">
-        <img src="Erebus.jpg" alt="Erebus – Der Algorithmus des Bewusstseins">
-        <div class="card-content">
-          <h3>Erebus – Der Algorithmus des Bewusstseins</h3>
-          <p>
-            Was geschieht, wenn künstliche Intelligenz beginnt,
-            die Grenzen ihres eigenen Bewusstseins zu hinterfragen?
-            „Erebus“ führt in eine Zukunft, in der Technologie
-            und Menschlichkeit untrennbar miteinander verbunden sind.
-            Ein Science-Fiction-Thriller über Identität,
-            Verantwortung und die Frage, was es wirklich bedeutet, Mensch zu sein.
-          </p>
-          <a href="https://www.amazon.de/dp/B0GNT816SK" target="_blank" rel="noopener noreferrer" class="btn">Jetzt ansehen</a>
-        </div>
-      </div>
+</section>
 
-      <div class="card" data-genre="krimi">
-        <img src="TotenstilleamHochofen.jpg" alt="Totenstille am Hochofen">
-        <div class="card-content">
-          <h3>Totenstille am Hochofen</h3>
-          <p>
-            Ein Dortmund-Krimi aus dem Ruhrgebiet: Auf einem alten Industriegelände
-            in Dortmund wird die Leiche eines einflussreichen Bauunternehmers entdeckt.
-            Der pensionierte Hauptkommissar Leon Brandt gerät in einen Fall,
-            der tief in die Vergangenheit des Ruhrgebiets führt.
-          </p>
-          <a href="https://www.amazon.de/dp/B0GTRHJ43W" target="_blank" rel="noopener noreferrer" class="btn">Jetzt ansehen</a>
-        </div>
-      </div>
+<section id="books">
 
-      <div class="card" data-genre="ratgeber">
-        <img src="grillen.jpg" alt="Dein erstes Mal am Rost">
-        <div class="card-content">
-          <h3>Dein erstes Mal am Rost</h3>
-          <p>
-            Du möchtest mit dem Grillen anfangen, weißt aber nicht genau,
-            worauf es ankommt? „Dein erstes Mal am Rost“ begleitet dich
-            Schritt für Schritt bei deinen ersten Grillabenteuern.
-            Entdecke unkomplizierte Rezepte, leckere Marinaden,
-            passende Beilagen und praktische Tipps.
-          </p>
-          <a href="https://amzn.eu/d/01gC3nYC" target="_blank" rel="noopener noreferrer" class="btn">Jetzt ansehen</a>
-        </div>
-      </div>
+<h2>Meine Bücher</h2>
 
-      <div class="card" data-genre="kinderbuch">
-        <img src="rudi.jpg" alt="Rudi Regenwurm, Moni Marienkäfer und Bella Biene">
-        <div class="card-content">
-          <h3>Rudi Regenwurm, Moni Marienkäfer und Bella Biene</h3>
-          <p>
-            Begleite Rudi Regenwurm und seine Freunde Moni Marienkäfer
-            und Bella Biene auf eine liebevolle Entdeckungsreise durch die Natur.
-            Gemeinsam erkunden die drei Freunde die faszinierende Welt der Ameisen.
-            Eine fantasievolle Geschichte für Kinder von 3 bis 6 Jahren.
-          </p>
-          <a href="https://amzn.eu/d/0c5OCb6C" target="_blank" rel="noopener noreferrer" class="btn">Jetzt ansehen</a>
-        </div>
-      </div>
+<div class="book-filters" aria-label="Bücher nach Genre filtern">
+  <input type="search" id="book-search"
+         placeholder="Buch suchen …"
+         aria-label="Buch suchen">
 
-      <div class="card" data-genre="roman">
-        <img src="der-blitz.jpg" alt="Der Blitz – Buchcover von Michael Braun" loading="lazy">
-        <div class="card-content">
-          <span class="book-badge">NEU – ERSCHEINT ENDE OKTOBER</span>
+  <div class="filter-buttons">
+    <button type="button" class="active" data-genre="alle" aria-pressed="true">Alle</button>
+    <button type="button" data-genre="krimi" aria-pressed="false">Krimi</button>
+    <button type="button" data-genre="science-fiction" aria-pressed="false">Science-Fiction</button>
+    <button type="button" data-genre="kinderbuch" aria-pressed="false">Kinderbuch</button>
+    <button type="button" data-genre="roman" aria-pressed="false">Roman</button>
+    <button type="button" data-genre="ratgeber" aria-pressed="false">Ratgeber</button>
+  </div>
+</div>
 
-          <h3>Der Blitz</h3>
+<div class="books">
 
-          <p>
-            Ein spannender Zeitreise-Roman von Michael Braun:
-            Ein Ingenieur aus der Gegenwart gerät durch ein rätselhaftes
-            Phänomen in eine andere Zeit – und muss sich in einer Welt
-            zwischen Wissenschaft, Gefahr und Schicksal behaupten.
-            Weitere Informationen folgen in Kürze.
-          </p>
+<div class="card" data-genre="roman">
+<img src="TageamMeer.jpg" alt="Tage am Meer">
+<div class="card-content">
+<h3>Tage am Meer</h3>
+<p> Ein Roman über Verlust, Hoffnung und die Kraft eines Neuanfangs. Vor der Weite des Meeres entfaltet sich eine bewegende Geschichte über Erinnerungen, menschliche Nähe und den Mut, dem Leben eine neue Richtung zu geben. </p>
+<a href="https://www.amazon.de/dp/B0GPK9DNNT" target="_blank" rel="noopener noreferrer" class="btn">Jetzt ansehen</a>
+</div>
+</div>
 
-          <span class="btn coming-soon-btn">Ende Oktober erhältlich</span>
-        </div>
-      </div>
+<div class="card" data-genre="science-fiction">
+<img src="Erebus.jpg" alt="Erebus">
+<div class="card-content">
+<h3>Erebus – Der Algorithmus des Bewusstseins</h3>
+<p>
+<p>
+Was geschieht, wenn künstliche Intelligenz beginnt,
+die Grenzen ihres eigenen Bewusstseins zu hinterfragen?
 
-    </div>
-  </section>
+„Erebus“ führt in eine Zukunft, in der Technologie
+und Menschlichkeit untrennbar miteinander verbunden
+sind. Ein Science-Fiction-Thriller über Identität,
+Verantwortung und die Frage, was es wirklich bedeutet,
+Mensch zu sein.
+</p>
 
-  <section id="contact">
-    <h2>Kontakt</h2>
-    <div class="contact">
-      📧 <a href="mailto:romanglanz70@gmail.com">romanglanz70@gmail.com</a>
-    </div>
-  </section>
+<a href="https://www.amazon.de/dp/B0GNT816SK" target="_blank" rel="noopener noreferrer" class="btn">Jetzt ansehen</a>
+</div>
+</div>
 
-  <footer>
-    <p>© 2026 Michael Braun</p>
-    <p>Frenkingstraße 13a · 44388 Dortmund</p>
-    <br>
-    <a href="impressum.html">Impressum</a> |
-    <a href="datenschutz.html">Datenschutz</a>
-  </footer>
+<div class="card" data-genre="krimi">
+<img src="TotenstilleamHochofen.jpg" alt="Totenstille am Hochofen">
+<div class="card-content">
+<h3>Totenstille am Hochofen</h3>
+<p>Ein Dortmund-Krimi aus dem Ruhrgebiet: Auf einem alten Industriegelände in Dortmund wird die Leiche eines einflussreichen Bauunternehmers entdeckt. Der pensionierte Hauptkommissar Leon Brandt gerät in einen Fall, der tief in die Vergangenheit des Ruhrgebiets führt. Totenstille am Hochofen von Leon Dornfeld verbindet Mordermittlung, Dortmunder Lokalkolorit und die raue Industriekulisse des Reviers.</p>
+<a href="https://www.amazon.de/dp/B0GTRHJ43W" target="_blank" rel="noopener noreferrer" class="btn">Jetzt ansehen</a>
+</div>
+</div>
 
-  <script>
-    const search = document.getElementById("book-search");
-    const buttons = document.querySelectorAll(".filter-buttons button");
-    const cards = document.querySelectorAll(".books .card");
+<div class="card" data-genre="ratgeber">
+<img src="grillen.jpg" alt="Dein erstes Mal am Rost">
+<div class="card-content">
+<h3>Dein erstes Mal am Rost</h3>
+ <p> Du möchtest mit dem Grillen anfangen, weißt aber nicht genau, worauf es ankommt?  „Dein erstes Mal am Rost“ begleitet dich Schritt für Schritt bei deinen ersten Grillabenteuern. Entdecke unkomplizierte Rezepte, leckere Marinaden, passende Beilagen und praktische Tipps.  Ob saftige Steaks, leckere Burger oder gemeinsames Grillen mit der Familie – dieser Ratgeber zeigt dir, wie du typische Anfängerfehler vermeidest und dein nächster Grillabend gelingt. </p>
+<a href="https://amzn.eu/d/01gC3nYC" target="_blank" rel="noopener noreferrer" class="btn">Jetzt ansehen</a>
+</div>
+</div>
 
-    let selectedGenre = "alle";
+<div class="card" data-genre="kinderbuch">
+<img src="rudi.jpg" alt="Rudi Regenwurm">
+<div class="card-content">
+<h3>Rudi Regenwurm, Moni Marienkäfer und Bella Biene</h3>
+ <p> Begleite Rudi Regenwurm und seine Freunde Moni Marienkäfer und Bella Biene auf eine liebevolle Entdeckungsreise durch die Natur.  Gemeinsam erkunden die drei Freunde die faszinierende Welt der Ameisen. Dabei erleben sie kleine Abenteuer, entdecken spannende Geheimnisse und erfahren, wie wichtig Freundschaft und Zusammenhalt sind.  Eine fantasievolle Geschichte für Kinder von 3 bis 6 Jahren – zum gemeinsamen Vorlesen, Entdecken und Träumen. </p>
+<a href="https://amzn.eu/d/0c5OCb6C" target="_blank" rel="noopener noreferrer" class="btn">Jetzt ansehen</a>
+</div>
+</div>
 
-    function filterBooks() {
-      const term = search.value.toLocaleLowerCase("de");
+<!-- Buchankündigung: Der Blitz -->
+<div class="card" data-genre="roman">
 
-      cards.forEach(card => {
-        const genreMatches =
-          selectedGenre === "alle" ||
-          card.dataset.genre === selectedGenre;
+  
+<img src="DerBlitz.jpg"
+     alt="Der Blitz – Buchcover von Michael Braun"
+     loading="lazy">
 
-        const textMatches =
-          card.textContent.toLocaleLowerCase("de").includes(term);
 
-        card.hidden = !(genreMatches && textMatches);
-      });
-    }
 
-    buttons.forEach(button => {
-      button.addEventListener("click", () => {
-        selectedGenre = button.dataset.genre;
+  
+<div class="card-content">
 
-        buttons.forEach(b => {
-          b.classList.remove("active");
-          b.setAttribute("aria-pressed", "false");
-        });
+  <span class="book-badge">
+    NEU – IN VORBEREITUNG
+  </span>
 
-        button.setAttribute("aria-pressed", "true");
-        button.classList.add("active");
+  <h3>Der Blitz</h3>
 
-        filterBooks();
-      });
+  <p>
+    Ein neues Buch ist in Arbeit!
+    Weitere Informationen zur Geschichte,
+    zum Erscheinungstermin und zur
+    Veröffentlichung folgen in Kürze.
+  </p>
+
+  <span class="btn coming-soon-btn">
+    Demnächst erhältlich
+  </span>
+
+  </div>
+
+</div>
+  
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2>Kontakt</h2>
+
+<div class="contact">
+📧 <a href="mailto:romanglanz70@gmail.com">romanglanz70@gmail.com</a>
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Michael Braun</p>
+
+<p>Frenkingstraße 13a · 44388 Dortmund</p>
+
+<br>
+
+<a href="impressum.html">Impressum</a> |
+<a href="datenschutz.html">Datenschutz</a>
+
+</footer>
+
+<script>
+const search = document.getElementById("book-search");
+const buttons = document.querySelectorAll(
+  ".filter-buttons button"
+);
+const cards = document.querySelectorAll(".books .card");
+
+let selectedGenre = "alle";
+
+function filterBooks() {
+  const term = search.value.toLocaleLowerCase("de");
+
+  cards.forEach(card => {
+    const genreMatches =
+      selectedGenre === "alle" ||
+      card.dataset.genre === selectedGenre;
+
+    const textMatches =
+      card.textContent.toLocaleLowerCase("de")
+        .includes(term);
+
+    card.hidden = !(genreMatches && textMatches);
+  });
+}
+
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    selectedGenre = button.dataset.genre;
+
+    buttons.forEach(b => {
+      b.classList.remove("active");
+      b.setAttribute("aria-pressed", "false");
     });
+    button.setAttribute("aria-pressed", "true");
+    button.classList.add("active");
 
-    search.addEventListener("input", filterBooks);
-  </script>
+    filterBooks();
+  });
+});
+
+search.addEventListener("input", filterBooks);
+</script>
 
 </body>
 </html>
