@@ -579,16 +579,75 @@ footer {
     background-position: center center;
   }
 }
+.blitz-banner {
+  max-width: none;
+  margin: 0;
+  padding: 32px 20px;
+  background: linear-gradient(135deg, #17365d, #24598f);
+  color: white;
+  text-align: center;
+}
 
+.blitz-banner-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.blitz-banner-badge {
+  display: inline-block;
+  background: #f59e0b;
+  color: white;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+.blitz-banner h2 {
+  color: white;
+  margin-bottom: 12px;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.blitz-banner p {
+  max-width: 760px;
+  margin: 0 auto 18px;
+  font-size: 1.05rem;
+}
+
+.blitz-banner-button {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 10px;
+  background: #f59e0b;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.blitz-banner-button:hover {
+  background: #d97706;
+}
 </style>
 </head>
 
 <body>
 
-<header class="hero" aria-label="Michael Braun – Autor aus Dortmund">
-  <h1 class="visually-hidden">Michael Braun – Autor aus Dortmund</h1>
-</header>
 
+  <div class="blitz-banner-inner">
+    <span class="blitz-banner-badge">NEU</span>
+
+    <h2>Der Blitz – erscheint Ende Oktober</h2>
+
+    <p>
+      Ein spannender Zeitreise-Roman von Michael Braun:
+      Ein Ingenieur aus dem Jahr 2026 gerät durch einen rätselhaften
+      Riss in der Zeit ins 14. Jahrhundert.
+    </p>
+
+    <a href="#books" class="blitz-banner-button">Mehr über Der Blitz</a>
+  </div>
+</section>
 <nav>
 <a href="#about">Über mich</a>
 <a href="#books">Bücher</a>
