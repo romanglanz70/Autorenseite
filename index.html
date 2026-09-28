@@ -31,63 +31,48 @@
     {
       "@type": "Book",
       "name": "Tage am Meer",
-      "author": {
-        "@type": "Person",
-        "name": "Michael Braun"
-      },
+      "author": {"@type": "Person", "name": "Michael Braun"},
       "url": "https://www.amazon.de/dp/B0GPK9DNNT"
     },
     {
       "@type": "Book",
       "name": "Erebus – Der Algorithmus des Bewusstseins",
-      "author": {
-        "@type": "Person",
-        "name": "Michael Braun"
-      },
+      "author": {"@type": "Person", "name": "Michael Braun"},
       "url": "https://www.amazon.de/dp/B0GNT816SK"
     },
     {
       "@type": "Book",
       "name": "Rudi Regenwurm, Moni Marienkäfer und Bella Biene",
-      "author": {
-        "@type": "Person",
-        "name": "Michael Braun"
-      },
+      "author": {"@type": "Person", "name": "Michael Braun"},
       "url": "https://amzn.eu/d/0c5OCb6C"
     },
     {
       "@type": "Book",
       "name": "Dein erstes Mal am Rost",
-      "author": {
-        "@type": "Person",
-        "name": "Michael Braun"
+      "author": {"@type": "Person", "name": "Michael Braun"}
+    },
     {
-  "@type": "Book",
-  "name": "Totenstille am Hochofen",
-  "author": {
-    "@type": "Person",
-    "name": "Michael Braun"
-  }
-},
-{
-  "@type": "Book",
-  "name": "Der Blitz",
-  "author": {
-    "@type": "Person",
-    "name": "Michael Braun"
-  },
-  "genre": "Zeitreise-Roman",
-  "datePublished": "2026-10",
-  "inLanguage": "de"
-}
+      "@type": "Book",
+      "name": "Totenstille am Hochofen",
+      "author": {"@type": "Person", "name": "Michael Braun"},
+      "url": "https://www.amazon.de/dp/B0GTRHJ43W"
+    },
+    {
+      "@type": "Book",
+      "name": "Der Blitz",
+      "author": {"@type": "Person", "name": "Michael Braun"},
+      "genre": "Zeitreise-Roman",
+      "datePublished": "2026-10",
+      "inLanguage": "de"
+    }
   ]
 }
 </script> 
-  <meta property="og:title" content="Michael Braun – Autor aus Dortmund">
-<meta property="og:description" content="Michael Braun aus Dortmund – Autor für Krimis, Science-Fiction, Kinderbücher und Grillbücher.">
+  <meta property="og:title" content="Michael Braun – Autor aus Dortmund | Der Blitz">
+<meta property="og:description" content="Der Blitz erscheint Ende Oktober. Entdecke die Bücher von Michael Braun: Krimi, Science-Fiction, Kinderbücher, Romane und Grillbücher.">
 <meta property="og:url" content="https://romanglanz.de/">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://romanglanz.de/Homepage.png"> 
+<meta property="og:image" content="https://romanglanz.de/Titelbild-homepage.png"> 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -579,21 +564,22 @@ footer {
     background-position: center center;
   }
 }
-.blitz-banner {
+section.blitz-banner {
   max-width: none;
+  width: 100%;
   margin: 0;
   padding: 32px 20px;
   background: linear-gradient(135deg, #17365d, #24598f);
-  color: white;
+  color: #ffffff;
   text-align: center;
 }
 
-.blitz-banner-inner {
+section.blitz-banner .blitz-banner-inner {
   max-width: 1000px;
   margin: 0 auto;
 }
 
-.blitz-banner-badge {
+section.blitz-banner .blitz-banner-badge {
   display: inline-block;
   background: #f59e0b;
   color: white;
@@ -603,19 +589,19 @@ footer {
   margin-bottom: 12px;
 }
 
-.blitz-banner h2 {
+section.blitz-banner h2 {
   color: white;
   margin-bottom: 12px;
   font-size: clamp(1.8rem, 4vw, 2.8rem);
 }
 
-.blitz-banner p {
+section.blitz-banner p {
   max-width: 760px;
   margin: 0 auto 18px;
   font-size: 1.05rem;
 }
 
-.blitz-banner-button {
+section.blitz-banner .blitz-banner-button {
   display: inline-block;
   padding: 12px 22px;
   border-radius: 10px;
@@ -625,7 +611,7 @@ footer {
   font-weight: 700;
 }
 
-.blitz-banner-button:hover {
+section.blitz-banner .blitz-banner-button:hover {
   background: #d97706;
 }
 </style>
@@ -633,21 +619,23 @@ footer {
 
 <body>
 
+<header class="hero" aria-label="Michael Braun – Autor aus Dortmund">
+  <h1 class="visually-hidden">Michael Braun – Autor aus Dortmund</h1>
+</header>
 
+<section class="blitz-banner" aria-labelledby="blitz-highlight-title">
   <div class="blitz-banner-inner">
     <span class="blitz-banner-badge">NEU</span>
-
-    <h2>Der Blitz – erscheint Ende Oktober</h2>
-
+    <h2 id="blitz-highlight-title">Der Blitz – erscheint Ende Oktober</h2>
     <p>
       Ein spannender Zeitreise-Roman von Michael Braun:
       Ein Ingenieur aus dem Jahr 2026 gerät durch einen rätselhaften
       Riss in der Zeit ins 14. Jahrhundert.
     </p>
-
     <a href="#books" class="blitz-banner-button">Mehr über Der Blitz</a>
   </div>
 </section>
+
 <nav>
 <a href="#about">Über mich</a>
 <a href="#books">Bücher</a>
@@ -734,7 +722,6 @@ Leidenschaft
 <img src="Erebus.jpg" alt="Erebus">
 <div class="card-content">
 <h3>Erebus – Der Algorithmus des Bewusstseins</h3>
-<p>
 <p>
 Was geschieht, wenn künstliche Intelligenz beginnt,
 die Grenzen ihres eigenen Bewusstseins zu hinterfragen?
