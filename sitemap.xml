@@ -36,4 +36,9 @@ F
   <loc>https://romanglanz.de/dein-erstes-mal-am-rost.html</loc>
   <priority>0.8</priority>
 </url>
+<url>
+  <loc>https://romanglanz.de/tage-am-meer.html</loc>
+  <priority>0.8</priority>
+</url>
+
 </urlset>
