@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>F
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -33,19 +33,26 @@
     },
     "image": "https://romanglanz.de/rudi.jpg",
     "url": "https://romanglanz.de/rudi-regenwurm.html",
-    "description": "Ein liebevolles Kinderbuch für 3 bis 6 Jahre über Natur, Ameisen, Freundschaft und gemeinsames Entdecken."
+    "description": "Ein liebevolles Kinderbuch für 3 bis 6 Jahre über Natur, Ameisen, Freundschaft und gemeinsames Entdecken.",
+    "offers": {
+      "@type": "Offer",
+      "url": "https://www.amazon.de/dp/B0H265M6ZJ",
+      "availability": "https://schema.org/InStock"
+    }
   }
   </script>
 
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
+
     body {
       font-family: "Segoe UI", Arial, sans-serif;
       background: #fffaf2;
       color: #334155;
       line-height: 1.7;
     }
+
     nav {
       position: sticky;
       top: 0;
@@ -55,19 +62,25 @@
       padding: 18px 20px;
       text-align: center;
     }
+
     nav a {
       color: #17365d;
       text-decoration: none;
       margin: 0 18px;
       font-weight: 700;
     }
-    nav a:hover { color: #d97706; }
+
+    nav a:hover {
+      color: #d97706;
+    }
+
     .hero {
       background: linear-gradient(135deg, #17365d, #24598f);
       color: #ffffff;
       text-align: center;
       padding: 70px 20px 55px;
     }
+
     .badge {
       display: inline-block;
       background: #f59e0b;
@@ -77,27 +90,32 @@
       font-weight: 800;
       margin-bottom: 18px;
     }
+
     .hero h1 {
       font-size: clamp(2.3rem, 5vw, 4.1rem);
       line-height: 1.15;
       margin-bottom: 14px;
     }
+
     .hero p {
       max-width: 760px;
       margin: 0 auto;
       font-size: 1.2rem;
     }
+
     main {
       max-width: 1150px;
       margin: 0 auto;
       padding: 65px 20px 90px;
     }
+
     .book {
       display: grid;
       grid-template-columns: minmax(260px, 380px) 1fr;
       gap: 55px;
       align-items: start;
     }
+
     .cover {
       width: 100%;
       display: block;
@@ -105,22 +123,36 @@
       border-radius: 20px;
       box-shadow: 0 18px 45px rgba(0,0,0,.14);
     }
-    .content h2 {
+
+    .content h2,
+    main > section > h2 {
       color: #17365d;
       font-size: 2.2rem;
       margin-bottom: 20px;
     }
-    .content p {
+
+    .content p,
+    main > section > p {
       margin-bottom: 20px;
       font-size: 1.08rem;
     }
+
+    main > section > h3 {
+      color: #17365d;
+      margin: 24px 0 8px;
+    }
+
     .keywords {
       margin: 28px 0;
       padding: 18px 20px;
       background: #eef6fb;
       border-radius: 14px;
     }
-    .keywords strong { color: #17365d; }
+
+    .keywords strong {
+      color: #17365d;
+    }
+
     .buy {
       display: inline-block;
       margin-top: 10px;
@@ -131,26 +163,47 @@
       text-decoration: none;
       font-weight: 800;
     }
-    .buy:hover { background: #d97706; }
-    .back { margin-top: 35px; }
+
+    .buy:hover {
+      background: #d97706;
+    }
+
+    .back {
+      margin-top: 35px;
+    }
+
     .back a {
       color: #17365d;
       font-weight: 700;
       text-decoration: none;
       border-bottom: 2px solid #f59e0b;
     }
+
     footer {
       background: #17365d;
       color: #ffffff;
       text-align: center;
       padding: 45px 20px;
     }
-    footer a { color: #fbbf24; text-decoration: none; }
+
+    footer a {
+      color: #fbbf24;
+      text-decoration: none;
+    }
 
     @media (max-width: 800px) {
-      .book { grid-template-columns: 1fr; }
-      .cover { max-width: 420px; margin: 0 auto; }
-      nav a { margin: 0 10px; }
+      .book {
+        grid-template-columns: 1fr;
+      }
+
+      .cover {
+        max-width: 420px;
+        margin: 0 auto;
+      }
+
+      nav a {
+        margin: 0 10px;
+      }
     }
   </style>
 </head>
@@ -163,6 +216,8 @@
     <a href="der-blitz.html">Der Blitz</a>
     <a href="totenstille-am-hochofen.html">Totenstille am Hochofen</a>
     <a href="erebus.html">Erebus</a>
+    <a href="tage-am-meer.html">Tage am Meer</a>
+    <a href="dein-erstes-mal-am-rost.html">Grillbuch</a>
     <a href="index.html#contact">Kontakt</a>
   </nav>
 
@@ -173,48 +228,80 @@
   </header>
 
   <main>
+
     <section class="book">
+
       <div>
         <img class="cover"
              src="rudi.jpg"
-             alt="Rudi Regenwurm, Moni Marienkäfer und Bella Biene – Kinderbuch von Michael Braun">
+             alt="Rudi Regenwurm, Moni Marienkäfer und Bella Biene – Kinderbuch von Michael Braun"
+             loading="lazy">
       </div>
 
       <div class="content">
+
         <h2>Gemeinsam die Natur entdecken</h2>
 
         <p>
-          Begleite Rudi Regenwurm und seine Freunde Moni Marienkäfer und
-          Bella Biene auf eine liebevolle Entdeckungsreise durch die Natur.
+          <strong>„Rudi Regenwurm, Moni Marienkäfer und Bella Biene“</strong>
+          ist ein liebevolles Kinderbuch für Kinder von 3 bis 6 Jahren über
+          Natur, Freundschaft und gemeinsames Entdecken.
         </p>
 
         <p>
           Gemeinsam erkunden die drei Freunde die faszinierende Welt der
           Ameisen, erleben kleine Abenteuer und entdecken, wie wichtig
-          Freundschaft, Zusammenhalt und gegenseitige Hilfe sind.
+          Zusammenhalt, gegenseitige Hilfe und Neugier auf die Natur sind.
         </p>
 
         <p>
-          Das Kinderbuch richtet sich an Kinder von 3 bis 6 Jahren und eignet
-          sich zum gemeinsamen Vorlesen, Entdecken und Träumen.
+          Das Buch eignet sich zum gemeinsamen Vorlesen, Entdecken und Träumen
+          und lädt Kinder dazu ein, Tiere und Natur mit offenen Augen zu erleben.
         </p>
 
         <div class="keywords">
-          <strong>Passend für Familien, die suchen nach:</strong>
-          Kinderbüchern über Natur, Ameisen, Regenwürmer, Marienkäfer,
-          Bienen, Freundschaft sowie Vorlesebüchern für Kinder von 3 bis 6 Jahren.
+          <strong>Genre & Themen:</strong>
+          Kinderbuch · Vorlesebuch · Natur · Ameisen · Regenwurm ·
+          Marienkäfer · Biene · Freundschaft · 3 bis 6 Jahre
         </div>
 
         <a class="buy"
-           href="https://amzn.eu/d/0c5OCb6C"
+           href="https://www.amazon.de/dp/B0H265M6ZJ"
            target="_blank"
            rel="noopener noreferrer">Bei Amazon ansehen</a>
 
         <div class="back">
           <a href="index.html#books">← Zurück zu allen Büchern</a>
         </div>
+
       </div>
+
     </section>
+
+    <section style="margin-top:60px;">
+
+      <h2>Häufige Fragen zum Kinderbuch</h2>
+
+      <h3>Für welches Alter ist das Buch geeignet?</h3>
+      <p>
+        Das Kinderbuch richtet sich an Kinder von 3 bis 6 Jahren und eignet
+        sich besonders zum gemeinsamen Vorlesen und Entdecken.
+      </p>
+
+      <h3>Worum geht es in der Geschichte?</h3>
+      <p>
+        Rudi Regenwurm, Moni Marienkäfer und Bella Biene entdecken gemeinsam
+        die Natur und lernen dabei die Welt der Ameisen näher kennen.
+      </p>
+
+      <h3>Welche Themen vermittelt das Buch?</h3>
+      <p>
+        Im Mittelpunkt stehen Natur, Freundschaft, Zusammenhalt,
+        gegenseitige Hilfe und die Freude am gemeinsamen Entdecken.
+      </p>
+
+    </section>
+
   </main>
 
   <footer>
@@ -225,12 +312,9 @@
       <a href="datenschutz.html">Datenschutz</a>
     </p>
   </footer>
-  </footer>
 
   <script data-goatcounter="https://romanglanz.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
 
-</body>
-</html>
 </body>
 </html>
