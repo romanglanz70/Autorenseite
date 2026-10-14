@@ -1,1 +1,83 @@
+name: IndexNow
 
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  submit-indexnow:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repository laden
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Geänderte Seiten ermitteln
+        id: pages
+        shell: bash
+        run: |
+          set -e
+
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            find . -type f -name "*.html" \
+              -not -path "./.git/*" \
+              | sed 's#^\./##' \
+              | sort > changed-pages.txt
+          else
+            BEFORE="${{ github.event.before }}"
+            AFTER="${{ github.sha }}"
+
+            if [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+              find . -type f -name "*.html" \
+                -not -path "./.git/*" \
+                | sed 's#^\./##' \
+                | sort > changed-pages.txt
+            else
+              git diff --name-only "$BEFORE" "$AFTER" \
+                | grep -E '\.html$' \
+                | sort -u > changed-pages.txt || true
+            fi
+          fi
+
+          echo "Gefundene HTML-Seiten:"
+          cat changed-pages.txt || true
+
+      - name: Kurz auf GitHub Pages warten
+        run: sleep 60
+
+      - name: Änderungen an IndexNow melden
+        shell: bash
+        env:
+          INDEXNOW_KEY: 2eBFAA3e3Be546e18C67529D0A0AD6Ce
+        run: |
+          set -e
+
+          if [ ! -s changed-pages.txt ]; then
+            echo "Keine geänderten HTML-Seiten. Nichts zu melden."
+            exit 0
+          fi
+
+          while IFS= read -r file; do
+
+            if [ "$file" = "index.html" ]; then
+              url="https://romanglanz.de/"
+            else
+              url="https://romanglanz.de/$file"
+            fi
+
+            echo "Melde an IndexNow: $url"
+
+            curl --fail --silent --show-error \
+              --get "https://api.indexnow.org/indexnow" \
+              --data-urlencode "url=$url" \
+              --data-urlencode "key=$INDEXNOW_KEY"
+
+            echo
+          done < changed-pages.txt
