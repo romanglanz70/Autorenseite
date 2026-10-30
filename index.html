@@ -689,16 +689,27 @@ section.blitz-banner p {
   max-width: 760px;
   margin: 0 auto 18px;
   font-size: 1.05rem;
-}
-
 section.blitz-banner .blitz-banner-button {
-  display: inline-block;
-  padding: 12px 22px;
-  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 24px;
+  margin: 8px;
+  border: 2px solid #f59e0b;
+  border-radius: 12px;
   background: #f59e0b;
   color: white;
   text-decoration: none;
   font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+section.blitz-banner .blitz-banner-button:hover {
+  background: #ffffff;
+  color: #17365d;
+  border-color: #ffffff;
+  transform: translateY(-2px);
 }
 
 section.blitz-banner .blitz-banner-button:hover {
