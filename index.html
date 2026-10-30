@@ -422,20 +422,26 @@ text-decoration:underline;
 }
 /* MOBILE */
 
-@media(max-width:768px){
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+  }
 
-.hero{
-min-height:75vh;
-}
+  .stats {
+    gap: 30px;
+  }
 
-.stats{
-gap:30px;
-}
+  .card img {
+    height: 350px;
+  }
 
-.card img{
-height:400px;
-}
+  .card-content {
+    padding: 20px;
+  }
 
+  .card-content .btn {
+    max-width: 260px;
+  }
 }
 
 .book-filters {
