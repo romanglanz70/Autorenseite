@@ -277,11 +277,126 @@ color:#0f172a;
 
 /* ABOUT */
 
-.about{
-max-width:900px;
-margin:auto;
-text-align:center;
-font-size:1.15rem;
+/* ABOUT – AUTORENPROFIL */
+
+.author-card {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  max-width: 1200px;
+  margin: 30px auto;
+  overflow: hidden;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #fffaf2, #f5ead8);
+  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.12);
+  border: 1px solid #eadbc5;
+}
+
+.author-visual {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 35px 20px;
+  background: linear-gradient(145deg, #17365d, #24598f);
+  color: #ffffff;
+  text-align: center;
+  border-right: 5px solid #e99a16;
+}
+
+.author-icon {
+  font-size: 85px;
+  margin-bottom: 20px;
+}
+
+.author-visual h3 {
+  font-size: 1.7rem;
+  margin: 0 0 10px;
+  color: #ffffff;
+}
+
+.author-visual p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #f5dfb9;
+}
+
+.author-content {
+  padding: 35px 40px;
+}
+
+.author-content h2 {
+  color: #17365d;
+  font-size: 2.2rem;
+  text-align: left;
+  margin: 0 0 22px;
+}
+
+.author-content p {
+  color: #26364a;
+  font-size: 1.08rem;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.author-content a {
+  color: #a45c00;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.author-content a:hover {
+  color: #17365d;
+}
+
+.author-genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.author-genres span {
+  display: inline-block;
+  padding: 10px 17px;
+  border-radius: 30px;
+  background: #17365d;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .author-card {
+    grid-template-columns: 1fr;
+    margin: 20px 10px;
+  }
+
+  .author-visual {
+    border-right: none;
+    border-bottom: 5px solid #e99a16;
+    padding: 25px 15px;
+  }
+
+  .author-icon {
+    font-size: 60px;
+  }
+
+  .author-content {
+    padding: 25px 20px;
+  }
+
+  .author-content h2 {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+
+  .author-content p {
+    font-size: 1rem;
+  }
+
+  .author-genres {
+    justify-content: center;
+  }
 }
 
 /* HIGHLIGHT */
@@ -800,18 +915,72 @@ section.blitz-banner .blitz-banner-button:hover {
 
 <section id="about">
 
-<h2>Michael Braun – Autor aus Dortmund</h2>
+  <div class="author-card">
 
-<p class="about">
-Michael Braun ist Autor aus Dortmund und schreibt Krimis, Science-Fiction, Romane, Kinderbücher und praxisnahe Ratgeber.
-Zu seinen Büchern gehören
-<a href="totenstille-am-hochofen.html">Totenstille am Hochofen</a>, ein Dortmund-Krimi aus dem Ruhrgebiet,
-<a href="erebus.html">Erebus – Der Algorithmus des Bewusstseins</a>, ein KI-Thriller über künstliche Intelligenz und Bewusstsein,
-sowie <a href="tage-am-meer.html">Tage am Meer</a>.
-Mit <a href="der-blitz.html">Der Blitz</a> ist ein spannender Zeitreise-Roman von Michael Braun jetzt bei epubli erhältlich. Er erzählt von einem Ingenieur aus dem Jahr 2026, der ins 14. Jahrhundert gerät.
-Kinderbücher wie <a href="rudi-regenwurm.html">Rudi Regenwurm und das Geheimnis der Ameisen</a> veröffentlicht Michael Braun unter dem Pseudonym <strong>Leon Dornfeld</strong>. 
-Auf Romanglanz finden Leser Informationen zu den Büchern, Neuerscheinungen, Hintergründen und Verkaufsseiten von Michael Braun.
-</p>
+    <div class="author-visual">
+      <div class="author-icon">📚</div>
+      <h3>Michael Braun</h3>
+      <p>
+        Autor aus Dortmund<br>
+        Geschichten aus dem Ruhrgebiet
+        und darüber hinaus.
+      </p>
+      <div style="font-size: 42px; margin-top: 15px;">
+        ✍️
+      </div>
+    </div>
+
+    <div class="author-content">
+
+      <h2>Über den Autor</h2>
+
+      <p>
+        Michael Braun ist Autor aus Dortmund und schreibt Krimis,
+        Science-Fiction, Romane, Kinderbücher und praxisnahe Ratgeber.
+        Seine Geschichten verbinden Spannung, Fantasie und Alltagsnähe –
+        oft mit einem besonderen Bezug zum Ruhrgebiet.
+      </p>
+
+      <p>
+        Zu seinen Büchern gehören
+        <a href="totenstille-am-hochofen.html">Totenstille am Hochofen</a>,
+        ein Dortmund-Krimi aus dem Ruhrgebiet,
+        <a href="erebus.html">Erebus – Der Algorithmus des Bewusstseins</a>,
+        ein KI-Thriller über künstliche Intelligenz und Bewusstsein,
+        sowie <a href="tage-am-meer.html">Tage am Meer</a>.
+      </p>
+
+      <p>
+        Mit <a href="der-blitz.html">Der Blitz – Eine Reise durch die Zeit</a>
+        ist ein spannender Zeitreise-Roman bei epubli erhältlich.
+        Er erzählt von einem Ingenieur aus dem Jahr 2026,
+        der ins 14. Jahrhundert gerät.
+      </p>
+
+      <p>
+        Kinderbücher wie
+        <a href="rudi-regenwurm.html">
+          Rudi Regenwurm und das Geheimnis der Ameisen
+        </a>
+        veröffentlicht Michael Braun unter dem Pseudonym
+        <strong>Leon Dornfeld</strong>.
+      </p>
+
+      <p>
+        Auf <a href="index.html">Romanglanz</a> finden Leser Informationen
+        zu seinen Büchern, Neuerscheinungen, Hintergründen und Verkaufsseiten.
+      </p>
+
+      <div class="author-genres">
+        <span>🔎 Krimis</span>
+        <span>🚀 Science-Fiction</span>
+        <span>📖 Romane</span>
+        <span>🐝 Kinderbücher</span>
+        <span>🔥 Ratgeber</span>
+      </div>
+
+    </div>
+  </div>
 
 </section>
 
